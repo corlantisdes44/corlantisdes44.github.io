@@ -1,9 +1,11 @@
 // TheBookGuy Spatiotemporal Cartographic Archive Engine
+// With Dynamic Botanical Maturation & Organic Lifecyle Tracking
 document.addEventListener("DOMContentLoaded", () => {
   const archiveRecords = [
     {
       id: "rec-florence-renaissance",
       numericCode: "02.380.09.0501.1450.1550.001",
+      uploadDate: "2026-10-25", // Just added today
       geoMeta: {
         continent: "02 (Europe)",
         country: "380 (Italy)",
@@ -30,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "rec-giza-dynastic",
       numericCode: "01.818.04.0042.2550.2490.001",
+      uploadDate: "2026-10-10", // 15 days ago -> In Bloom Stage
       geoMeta: {
         continent: "01 (Africa)",
         country: "818 (Egypt)",
@@ -56,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "rec-edo-shogunate",
       numericCode: "03.392.13.0108.1603.1867.001",
+      uploadDate: "2026-08-15", // ~71 days ago -> Ripened Fruit Harvest Stage
       geoMeta: {
         continent: "03 (Asia)",
         country: "392 (Japan)",
@@ -81,6 +85,60 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
+  // -------------------------------------------------------------
+  // BOTANICAL MATURATION & BLOOMING ENGINE
+  // Calculates how long a book has been on the site like a plant:
+  // Sprout -> In Bloom -> Ripened Fruit -> Deep Heritage Root
+  // -------------------------------------------------------------
+  function calculateMaturation(uploadDateStr) {
+    const uploadTime = new Date(uploadDateStr).getTime();
+    const now = new Date().getTime();
+    const diffMs = Math.max(0, now - uploadTime);
+    const daysElapsed = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+    if (daysElapsed <= 7) {
+      return {
+        stage: "stage-sprout",
+        icon: "🌱",
+        statusText: daysElapsed === 0 ? "Sprouted Today" : `Sprouted ${daysElapsed}d ago`,
+        phaseName: "Stage I • Fresh Sprout",
+        progressPercent: Math.min(25, Math.max(8, daysElapsed * 3.5)),
+        daysElapsed: daysElapsed
+      };
+    } else if (daysElapsed <= 30) {
+      const bloomPct = Math.min(60, 25 + Math.floor(((daysElapsed - 7) / 23) * 35));
+      return {
+        stage: "stage-flower",
+        icon: "🌸",
+        statusText: `In Bloom (${daysElapsed}d)`,
+        phaseName: "Stage II • Flower in Bloom",
+        progressPercent: bloomPct,
+        daysElapsed: daysElapsed
+      };
+    } else if (daysElapsed <= 90) {
+      const ripePct = Math.min(90, 60 + Math.floor(((daysElapsed - 30) / 60) * 30));
+      const months = Math.floor(daysElapsed / 30);
+      return {
+        stage: "stage-ripe",
+        icon: "🍎",
+        statusText: `Ripe Harvest (${months}mo)`,
+        phaseName: "Stage III • Ripened Fruit",
+        progressPercent: ripePct,
+        daysElapsed: daysElapsed
+      };
+    } else {
+      const months = Math.floor(daysElapsed / 30);
+      return {
+        stage: "stage-ancient",
+        icon: "🌳",
+        statusText: `Heritage Oak (${months}mo)`,
+        phaseName: "Stage IV • Deep-Rooted Tree",
+        progressPercent: 100,
+        daysElapsed: daysElapsed
+      };
+    }
+  }
+
   const grid = document.getElementById("book-grid");
   const filterPills = document.querySelectorAll(".filter-pill");
 
@@ -88,6 +146,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderCatalog(items) {
     grid.innerHTML = "";
     items.forEach(book => {
+      const maturation = calculateMaturation(book.uploadDate);
+
       const card = document.createElement("article");
       card.className = "book-card";
       card.id = book.id;
@@ -95,7 +155,12 @@ document.addEventListener("DOMContentLoaded", () => {
       card.innerHTML = `
         <div class="card-cover-stage">
           <span class="card-coord-stamp">${book.numericCode}</span>
-          <span class="card-format-tag">${book.format}</span>
+          
+          <!-- Botanical Maturation Badge -->
+          <div class="maturation-badge ${maturation.stage}">
+            <span class="maturation-icon">${maturation.icon}</span>
+            <span>${maturation.statusText}</span>
+          </div>
           
           <div class="book-physical-mockup">
             <span class="mockup-header">${book.numericCode.slice(0, 10)}...</span>
@@ -112,6 +177,17 @@ document.addEventListener("DOMContentLoaded", () => {
           <h3 class="card-title">${book.title}</h3>
           <p class="card-blurb">${book.blurb}</p>
           
+          <!-- Botanical Lifecycle Growth Meter -->
+          <div class="maturation-meter-container">
+            <div class="maturation-meter-label">
+              <span>${maturation.phaseName}</span>
+              <span>${maturation.daysElapsed} days mature</span>
+            </div>
+            <div class="maturation-meter-bar">
+              <div class="maturation-meter-fill" style="width: ${maturation.progressPercent}%;"></div>
+            </div>
+          </div>
+
           <div class="card-specs">
             <span>${book.specs}</span>
           </div>
@@ -212,26 +288,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (match) {
       const g = match.geoMeta;
+      const mat = calculateMaturation(match.uploadDate);
+
       vaultResult.innerHTML = `
-        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--glow-emerald); margin-bottom: 6px;">
-          // COORDINATE VERIFIED IN REGISTRY
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--c-celadon); margin-bottom: 6px;">
+          // COORDINATE VERIFIED IN REGISTRY • ${mat.icon} ${mat.phaseName}
         </div>
-        <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--tint-050); margin-bottom: 12px;">
+        <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--c-cream-light); margin-bottom: 12px;">
           ${match.title}
         </h4>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--tint-300); margin-bottom: 18px; border-top: 1px solid var(--tone-700); padding-top: 12px;">
-          <div><span style="color: var(--tone-400);">CONTINENT:</span> ${g.continent}</div>
-          <div><span style="color: var(--tone-400);">COUNTRY:</span> ${g.country}</div>
-          <div><span style="color: var(--tone-400);">REGION:</span> ${g.region}</div>
-          <div><span style="color: var(--tone-400);">LOCATION:</span> ${g.location}</div>
-          <div><span style="color: var(--tone-400);">EPOCH:</span> ${g.epoch}</div>
-          <div><span style="color: var(--tone-400);">VOLUME:</span> #${g.volume}</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 18px; border-top: 1px solid var(--border-organic); padding-top: 12px;">
+          <div><span style="color: var(--text-muted);">CONTINENT:</span> ${g.continent}</div>
+          <div><span style="color: var(--text-muted);">COUNTRY:</span> ${g.country}</div>
+          <div><span style="color: var(--text-muted);">REGION:</span> ${g.region}</div>
+          <div><span style="color: var(--text-muted);">LOCATION:</span> ${g.location}</div>
+          <div><span style="color: var(--text-muted);">EPOCH:</span> ${g.epoch}</div>
+          <div><span style="color: var(--text-muted);">VOLUME:</span> #${g.volume}</div>
         </div>
         <div style="display: flex; gap: 10px;">
-          <button id="vault-jump-btn" style="flex: 1; background: var(--tint-100); color: var(--shade-950); border: none; padding: 10px; font-size: 0.82rem; font-weight: 600; cursor: pointer; border-radius: var(--radius-xs);">
+          <button id="vault-jump-btn" style="flex: 1; background: var(--c-cream-parch); color: var(--c-espresso); border: 1px solid var(--c-warm-sand); padding: 10px; font-size: 0.82rem; font-weight: 700; cursor: pointer; border-radius: var(--radius-xs);">
             Locate Book on Shelf ↓
           </button>
-          <a href="${match.amazonUrl}" target="_blank" rel="noopener" style="flex: 1; background: var(--shade-850); color: var(--tint-050); border: 1px solid var(--tone-600); text-align: center; padding: 10px; font-size: 0.82rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-xs);">
+          <a href="${match.amazonUrl}" target="_blank" rel="noopener" style="flex: 1; background: #141a16; color: var(--c-cream-light); border: 1px solid var(--border-organic); text-align: center; padding: 10px; font-size: 0.82rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-xs);">
             Amazon Listing ↗
           </a>
         </div>
@@ -280,20 +358,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const id = btn.getAttribute("data-id");
         const item = archiveRecords.find(r => r.id === id);
         if (item) {
+          const mat = calculateMaturation(item.uploadDate);
+
           modalBody.innerHTML = `
-            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--glow-emerald); margin-bottom: 8px;">
-              NUMERIC ARCHIVE REF: ${item.numericCode}
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--c-celadon); margin-bottom: 8px;">
+              NUMERIC ARCHIVE REF: ${item.numericCode} • ${mat.icon} ${mat.phaseName}
             </div>
-            <h2 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 500; margin-bottom: 6px; color: var(--tint-050);">
+            <h2 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 500; margin-bottom: 6px; color: var(--c-cream-light);">
               ${item.title}
             </h2>
-            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--tint-300); margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--tone-700);">
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--border-organic);">
               ${item.specs} • ${item.geoMeta.epoch}
             </div>
-            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--tint-100); margin-bottom: 14px;">
+            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--c-celadon); margin-bottom: 14px;">
               Manufacturing & Interior Specifications:
             </h4>
-            <ul style="padding-left: 18px; color: var(--tint-300); font-size: 0.88rem; line-height: 1.8; margin-bottom: 28px; font-weight: 300;">
+            <ul style="padding-left: 18px; color: var(--text-secondary); font-size: 0.88rem; line-height: 1.8; margin-bottom: 28px; font-weight: 300;">
               ${item.previewSpecs.map(s => `<li>${s}</li>`).join("")}
             </ul>
             <a href="${item.amazonUrl}" target="_blank" rel="noopener" class="btn-buy-amazon" style="text-decoration: none;">
