@@ -1,44 +1,45 @@
 {
-  "bookId": "001_florence_1450",
-  "archivalNumericCode": "02.380.09.0501.1450.1550.001",
-  "spatiotemporalMeta": {
-    "continent": "02 (Europe)",
-    "country": "380 (Italy)",
-    "region": "09 (Tuscany)",
-    "location": "0501 (Florence / Firenze)",
-    "epochStart": 1450,
-    "epochEnd": 1550,
-    "epochName": "The High Renaissance",
-    "volumeNumber": "001"
+  "series": "The Spatiotemporal Puzzle Series",
+  "volume": "001",
+  "classification_code": "02.380.09.0501.1450.1550.001",
+  "title": "Historical Word Search: Florence (1450-1550 AD)",
+  "subtitle": "100 Large Print Puzzles of the High Renaissance | Masters, Bottegas, Architecture & Medici History",
+  "author": "TheBookGuy",
+  "publisher": "TheBookGuy Press",
+  "edition": "Large Print Edition",
+  "publication_date": "2026-10-25",
+  "language": "English",
+  "dimensions": {
+    "trim_width_inches": 8.5,
+    "trim_height_inches": 11.0,
+    "page_count": 102,
+    "spine_width_inches": 0.230,
+    "paper_type": "Cream",
+    "ink_type": "Black and White"
   },
-  "kdpListing": {
-    "title": "Florence: The High Renaissance (1450–1550 AD)",
-    "subtitle": "Large-Print Historical Word Search & Micro-History Chronicles",
-    "seriesName": "Spatiotemporal Historical Puzzles",
-    "seriesVolume": 1,
-    "author": "TheBookGuy Archive",
-    "trimSize": "8.5 x 11 inches",
-    "pageCount": 100,
-    "interiorType": "Black & White on Cream Paper",
-    "spineWidthInches": 0.225,
-    "coverFinish": "Matte",
-    "listPriceUsd": 8.99,
-    "estimatedPrintCostUsd": 2.40,
-    "estimatedRoyaltyPerSaleUsd": 2.99,
-    "targetAudience": ["Adults", "Seniors", "History Enthusiasts", "Art History Students"],
-    "categories": [
-      "GAMES & ACTIVITIES / Logic & Brain Teasers",
-      "HISTORY / Europe / Renaissance"
-    ],
-    "keywords": [
-      "florence renaissance history puzzle book",
-      "large print word search for seniors history",
-      "italian renaissance art history word search",
-      "lost civilizations word search for adults",
-      "brunelleschi dome medici history trivia",
-      "screen free gifts for history buffs",
-      "brain games relaxing historical word search"
-    ],
-    "descriptionHtml": "<p><b>Step into the bottegas, guild halls, and marble quarries of 15th-century Florence.</b></p><p><i>Florence: The High Renaissance (1450–1550 AD)</i> is Volume 001 of the Spatiotemporal Archive—a systematic series capturing human history at the intersection of exact geographic place and historical time.</p><p><b>Inside this physical volume:</b></p><ul><li><b>80 Curated Themed Word Searches:</b> From Brunelleschi’s vaulting techniques to Leonardo’s mechanical notebooks, Botticelli’s pigment recipes, and the wool guild ledgers of the Arte della Lana.</li><li><b>Historical Context on Every Page:</b> Every puzzle is paired with a micro-history chronicle setting the scene in 15th-century Tuscany.</li><li><b>Engineered 18pt Large-Print:</b> High-contrast, easy-to-read typography designed for relaxed, screen-free focus with zero eye strain.</li><li><b>Complete Solution Keys:</b> Full answer grids included at the back of the book (Pages 81–100).</li><li><b>Archival Registry Stamp:</b> Classified under international cartographic coordinate <code>02.380.09.0501.1450.1550.001</code>.</li></ul><p>Standardized 8.5\" × 11\" format printed on rich cream paper. An ideal gift for history lovers, travelers, and curious minds.</p>"
-  }
+  "cover_dimensions": {
+    "total_width_inches": 17.48,
+    "total_height_inches": 11.25,
+    "bleed_inches": 0.125
+  },
+  "pricing": {
+    "currency": "USD",
+    "list_price": 8.99,
+    "estimated_printing_cost": 2.45,
+    "estimated_royalty_per_sale": 2.94
+  },
+  "kdp_categories": [
+    "Games & Activities / Word & Word Search",
+    "History / Renaissance"
+  ],
+  "kdp_keywords": [
+    "word search large print",
+    "renaissance history puzzles",
+    "florence travel activity book",
+    "medici history puzzle book",
+    "word search for adults seniors",
+    "italian renaissance gift",
+    "historical word search puzzle"
+  ],
+  "description_html": "<h2>Step Into the High Renaissance with 100 Large-Print Historical Word Searches</h2><p>Immerse yourself in the golden century of human creativity, genius, and statecraft. Between 1450 and 1550 AD, Florence transformed art, science, and the architecture of the modern mind.</p><p>This masterfully crafted puzzle book brings the High Renaissance to life through <strong>100 thematic word search puzzles</strong> and <strong>1,800 authentic historical terms</strong>.</p><h3>What Makes This Book Exceptional:</h3><ul><li><strong>100 Full-Page Puzzles:</strong> Dedicated entirely to historical discovery across 100 hand-researched themes.</li><li><strong>True Large Print:</strong> Spacious 16x16 matrices set in bold, crisp typography on soft cream paper for effortless reading without eye strain.</li><li><strong>Genuine Museum Art:</strong> Authentic Renaissance oil painting canvas artwork subtly embedded into every puzzle background.</li><li><strong>Rich Historical Vocabulary:</strong> 1,800 authentic terms chronicling Brunelleschi, Leonardo, Michelangelo, Botticelli, the Medici Bank, and the great guild bottegas.</li><li><strong>Pure Puzzle Experience:</strong> Zero clutter, zero filler, and immediate puzzle engagement on every page.</li></ul><p>The perfect screen-free mental workout and gift for history buffs, puzzle lovers, and travelers alike.</p>"
 }

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Florence (1450-1550 AD) - Commercial Puzzle Book Full-Wrap Cover Proof</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      background: #0d0a08;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif;
+      color: #e5cfa8;
+    }
+    h1 {
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    p {
+      color: #a8947b;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+    .wrap-container {
+      width: 1258px;
+      height: 810px;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(212, 175, 55, 0.35);
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      background: #1a1410;
+    }
+    .back-cover {
+      width: 621px;
+      height: 810px;
+      background: #1a1410;
+      position: relative;
+      box-sizing: border-box;
+      padding: 36px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .back-frame {
+      position: absolute;
+      top: 24px; left: 24px; right: 24px; bottom: 24px;
+      border: 1.2px solid #b89758;
+      pointer-events: none;
+    }
+    .spine {
+      width: 16.5px;
+      height: 810px;
+      background: #120d09;
+      border-left: 1px solid #b89758;
+      border-right: 1px solid #b89758;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .spine-text {
+      transform: rotate(90deg);
+      white-space: nowrap;
+      font-family: "Times New Roman", serif;
+      font-weight: bold;
+      font-size: 7.5px;
+      letter-spacing: 0.14em;
+      color: #ffffff;
+    }
+    .front-cover {
+      width: 621px;
+      height: 810px;
+      position: relative;
+      background-image: url('florence_1450_oil_painting.png');
+      background-size: cover;
+      background-position: center;
+      box-sizing: border-box;
+      padding: 36px 36px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+    .front-vignette-top {
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 310px;
+      background: linear-gradient(180deg, rgba(15, 11, 8, 0.88) 0%, rgba(15, 11, 8, 0.65) 60%, rgba(15, 11, 8, 0) 100%);
+      pointer-events: none;
+    }
+    .front-vignette-bottom {
+      position: absolute;
+      bottom: 0; left: 0; right: 0; height: 230px;
+      background: linear-gradient(0deg, rgba(15, 11, 8, 0.92) 0%, rgba(15, 11, 8, 0.65) 60%, rgba(15, 11, 8, 0) 100%);
+      pointer-events: none;
+    }
+    .front-frame {
+      position: absolute;
+      top: 24px; left: 24px; right: 24px; bottom: 24px;
+      border: 1.2px solid #d4af37;
+      pointer-events: none;
+    }
+    .series-banner {
+      font-family: "Times New Roman", serif;
+      font-size: 9.5px;
+      font-weight: bold;
+      letter-spacing: 0.25em;
+      color: #e5cfa8;
+      position: relative;
+      z-index: 2;
+    }
+    .main-title-box {
+      position: relative;
+      z-index: 2;
+      margin-top: 10px;
+    }
+    .word-search-title {
+      font-family: "Times New Roman", serif;
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      color: #e5cfa8;
+      line-height: 1.05;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.9);
+      margin: 4px 0 6px;
+    }
+    .word-search-sub {
+      font-family: "Times New Roman", serif;
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 0.12em;
+      color: #ffffff;
+      text-shadow: 0 4px 16px rgba(0,0,0,0.9);
+    }
+    .florence-subtitle {
+      font-family: "Times New Roman", serif;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.22em;
+      color: #ffffff;
+      margin-top: 6px;
+    }
+    .epoch-badge {
+      font-family: "Times New Roman", serif;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 0.14em;
+      color: #d4af37;
+      margin-top: 3px;
+    }
+    .badge-pill {
+      position: relative;
+      z-index: 2;
+      background: #d4af37;
+      color: #111111;
+      font-family: "Times New Roman", serif;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.14em;
+      padding: 7px 24px;
+      border-radius: 3px;
+      margin: 12px auto 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+      display: inline-block;
+    }
+    /* Visual Puzzle Grid Sample */
+    .sample-grid-box {
+      position: relative;
+      z-index: 2;
+      background: rgba(22, 16, 11, 0.88);
+      border: 1px solid #d4af37;
+      border-radius: 4px;
+      padding: 10px 14px;
+      margin: 10px 0;
+      display: inline-block;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+    }
+    .sample-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 20px);
+      grid-gap: 2px;
+    }
+    .sample-cell {
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      font-family: -apple-system, sans-serif;
+      font-weight: bold;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+    }
+    .sample-cell.highlight {
+      background: #d4af37;
+      color: #111111;
+      box-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+    }
+    .sample-caption {
+      font-family: "Times New Roman", serif;
+      font-size: 9px;
+      font-style: italic;
+      color: #e0d5c3;
+      margin-top: 6px;
+    }
+    .stamp-pill {
+      position: relative;
+      z-index: 2;
+      background: rgba(22, 16, 11, 0.92);
+      border: 1px solid #d4af37;
+      padding: 10px 16px;
+      text-align: center;
+      border-radius: 4px;
+      width: 320px;
+    }
+    .stamp-title {
+      font-family: "Times New Roman", serif;
+      font-size: 8px;
+      font-weight: bold;
+      letter-spacing: 0.16em;
+      color: #d4af37;
+    }
+    .stamp-code {
+      font-family: monospace;
+      font-size: 11px;
+      font-weight: bold;
+      color: #ffffff;
+      margin: 3px 0;
+      letter-spacing: 0.08em;
+    }
+    .stamp-imprint {
+      font-family: "Times New Roman", serif;
+      font-size: 7.5px;
+      color: #d8cebb;
+      letter-spacing: 0.1em;
+    }
+    .barcode-box {
+      position: absolute;
+      bottom: 36px; right: 36px;
+      width: 144px; height: 86px;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 7.5px;
+      text-align: center;
+      padding: 6px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>FLORENCE: THE HIGH RENAISSANCE (1450–1550 AD)</h1>
+  <p>Commercial Puzzle Book Full-Wrap Proof • 100 Large-Print Puzzles • 17.48" × 11.25" at 300 DPI</p>
+
+  <div class="wrap-container">
+    <!-- BACK COVER -->
+    <div class="back-cover">
+      <div class="back-frame"></div>
+      <div>
+        <div class="series-banner" style="text-align:center;">THE SPATIOTEMPORAL PUZZLE SERIES</div>
+        <div style="font-family:'Times New Roman', serif; font-size:18px; font-weight:bold; color:#ffffff; text-align:center; margin:14px 0 2px; letter-spacing:0.1em;">CHALLENGE YOUR MIND IN</div>
+        <div style="font-family:'Times New Roman', serif; font-size:22px; font-weight:bold; color:#e5cfa8; text-align:center; letter-spacing:0.12em; margin-bottom:14px;">RENAISSANCE FLORENCE</div>
+        <p style="font-family:'Times New Roman', serif; font-size:10px; line-height:1.6; color:#f0e6d6; text-align:justify; margin:0 0 10px;">
+          Immerse yourself in the golden age of art, genius, and architecture. Between 1450 and 1550 AD, Florence forged the modern world. This masterfully crafted collection brings the High Renaissance to life through 100 large-print word search puzzles.
+        </p>
+        <p style="font-family:'Times New Roman', serif; font-size:10px; line-height:1.6; color:#f0e6d6; text-align:justify; margin:0 0 14px;">
+          From Brunelleschi's magnificent Duomo and Leonardo da Vinci's restless notebooks, to Michelangelo's David and the great merchant bottegas, every puzzle is an engaging journey into history.
+        </p>
+        <div style="font-family:'Times New Roman', serif; font-size:9.5px; color:#d4af37; font-weight:bold; margin-bottom:4px;">* 100 THEMATIC PUZZLES</div>
+        <div style="font-family:'Times New Roman', serif; font-size:8.5px; color:#e0d5c3; margin-bottom:8px; padding-left:10px;">1,800 authentic historical terms chronicling artists, monuments, and guilds.</div>
+        <div style="font-family:'Times New Roman', serif; font-size:9.5px; color:#d4af37; font-weight:bold; margin-bottom:4px;">* EASY-ON-THE-EYES LARGE PRINT</div>
+        <div style="font-family:'Times New Roman', serif; font-size:8.5px; color:#e0d5c3; margin-bottom:8px; padding-left:10px;">Spacious 16x16 letter matrices set on bright backgrounds for effortless reading.</div>
+        <div style="font-family:'Times New Roman', serif; font-size:9.5px; color:#d4af37; font-weight:bold; margin-bottom:4px;">* GENUINE MUSEUM CANVAS ART</div>
+        <div style="font-family:'Times New Roman', serif; font-size:8.5px; color:#e0d5c3; margin-bottom:8px; padding-left:10px;">Rich Renaissance oil painting atmosphere embedded into every puzzle background.</div>
+        <div style="font-family:'Times New Roman', serif; font-size:9.5px; color:#d4af37; font-weight:bold; margin-bottom:4px;">* RELAXING & EDUCATIONAL</div>
+        <div style="font-family:'Times New Roman', serif; font-size:8.5px; color:#e0d5c3; padding-left:10px;">The perfect screen-free mental workout for history lovers and puzzle enthusiasts.</div>
+      </div>
+
+      <div class="barcode-box">
+        <div>BARCODE RESERVATION ZONE</div>
+        <div style="font-size:6.5px; color:#aaa; margin-top:4px;">(Amazon KDP will imprint ISBN barcode here)</div>
+      </div>
+    </div>
+
+    <!-- SPINE -->
+    <div class="spine">
+      <div class="spine-text">HISTORICAL WORD SEARCH: FLORENCE (1450-1550) &nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp; 100 PUZZLES &nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp; THEBOOKGUY</div>
+    </div>
+
+    <!-- FRONT COVER (Commercial Puzzle Book Design) -->
+    <div class="front-cover">
+      <div class="front-vignette-top"></div>
+      <div class="front-vignette-bottom"></div>
+      <div class="front-frame"></div>
+
+      <div>
+        <div class="series-banner">THE SPATIOTEMPORAL PUZZLE SERIES</div>
+        <div class="main-title-box">
+          <div class="word-search-sub">HISTORICAL</div>
+          <div class="word-search-title">WORD SEARCH</div>
+          <div class="florence-subtitle">FLORENCE</div>
+          <div class="epoch-badge">THE HIGH RENAISSANCE (1450–1550 AD)</div>
+        </div>
+
+        <div class="badge-pill">100 LARGE-PRINT PUZZLES</div>
+      </div>
+
+      <!-- Integrated Visual Puzzle Grid Graphic -->
+      <div class="sample-grid-box">
+        <div class="sample-grid">
+          <!-- Row 0: MEDICI -->
+          <div class="sample-cell highlight">M</div>
+          <div class="sample-cell highlight">E</div>
+          <div class="sample-cell highlight">D</div>
+          <div class="sample-cell highlight">I</div>
+          <div class="sample-cell highlight">C</div>
+          <div class="sample-cell highlight">I</div>
+          <div class="sample-cell">S</div>
+          <!-- Row 1: DUOMO (col 0) -->
+          <div class="sample-cell highlight">D</div>
+          <div class="sample-cell">A</div>
+          <div class="sample-cell">N</div>
+          <div class="sample-cell">T</div>
+          <div class="sample-cell">E</div>
+          <div class="sample-cell">B</div>
+          <div class="sample-cell">A</div>
+          <!-- Row 2 -->
+          <div class="sample-cell highlight">U</div>
+          <div class="sample-cell">R</div>
+          <div class="sample-cell">N</div>
+          <div class="sample-cell">A</div>
+          <div class="sample-cell">R</div>
+          <div class="sample-cell">N</div>
+          <div class="sample-cell">O</div>
+          <!-- Row 3 -->
+          <div class="sample-cell highlight">O</div>
+          <div class="sample-cell">I</div>
+          <div class="sample-cell">L</div>
+          <div class="sample-cell">S</div>
+          <div class="sample-cell">F</div>
+          <div class="sample-cell">O</div>
+          <div class="sample-cell">R</div>
+          <!-- Row 4 -->
+          <div class="sample-cell highlight">M</div>
+          <div class="sample-cell">C</div>
+          <div class="sample-cell">R</div>
+          <div class="sample-cell">E</div>
+          <div class="sample-cell">S</div>
+          <div class="sample-cell">T</div>
+          <div class="sample-cell">I</div>
+          <!-- Row 5 -->
+          <div class="sample-cell highlight">O</div>
+          <div class="sample-cell">A</div>
+          <div class="sample-cell">R</div>
+          <div class="sample-cell">T</div>
+          <div class="sample-cell">G</div>
+          <div class="sample-cell">U</div>
+          <div class="sample-cell">N</div>
+          <!-- Row 6 -->
+          <div class="sample-cell">P</div>
+          <div class="sample-cell">A</div>
+          <div class="sample-cell">T</div>
+          <div class="sample-cell">R</div>
+          <div class="sample-cell">O</div>
+          <div class="sample-cell">N</div>
+          <div class="sample-cell">S</div>
+        </div>
+        <div class="sample-caption">1,800 Historical Terms * 16x16 Matrices * Master Bottegas & Art</div>
+      </div>
+
+      <div class="stamp-pill">
+        <div class="stamp-title">ARCHIVAL REGISTRY CODE</div>
+        <div class="stamp-code">02.380.09.0501.1450.1550.001</div>
+        <div class="stamp-imprint">VOLUME 001 * THEBOOKGUY PRESS</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

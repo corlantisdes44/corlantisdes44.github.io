@@ -962,6 +962,246 @@ const puzzlesData = [
       "SERIES ARCHIVE", "ARNO LEGACY", "TIMELESS ART", "WISDOM",
       "CULTURAL BEACON", "IMMORTAL"
     ]
+  },
+  {
+    id: 81,
+    title: "MEDICI VILLAS OF TUSCANY",
+    subtitle: "Country Estates of Careggi, Castello & Fiesole",
+    words: [
+      "CAREGGI VILLA", "CASTELLO", "POGGIO CAIANO", "FIESOLE",
+      "MICHELOZZO", "TERRACE", "ITALIAN GARDEN", "CYPRESS",
+      "COUNTRY RETREAT", "VINTAGE", "FOUNTAIN", "HUMANIST CIRCLE",
+      "LOGGIA", "RUSTIC", "OLIVE GROVE", "MEDICI COURT",
+      "VILLA ESTATE", "ARCADIA"
+    ]
+  },
+  {
+    id: 82,
+    title: "SANTA MARIA NOVELLA PHARMACY",
+    subtitle: "The Dominican Friars & Officina Profumo",
+    words: [
+      "OFFICINA", "DOMINICAN", "ROSE WATER", "ACQUA DI ROSE",
+      "PERFUME", "HERBAL REMEDY", "POTION", "DISTILLATION",
+      "CLOISTER HERB", "ALAMBIC", "CERAMIC JAR", "MAJOLICA",
+      "LAVENDER", "APOTHECARY", "ELIXIR", "FRAGRANCE",
+      "MONASTIC", "RECEIPT BOOK"
+    ]
+  },
+  {
+    id: 83,
+    title: "RENAISSANCE SWORD & STEEL",
+    subtitle: "The Masters of Florentine Fencing & Arms",
+    words: [
+      "RAPIER", "BROADSWORD", "DAGGER", "STEEL BLADE",
+      "TEMPERING", "ARMORER", "GUILD OF IRON", "FENCING MASTER",
+      "PARRY", "THRUST", "POMMEL", "CROSSGUARD",
+      "DAMASCENE", "HELMET", "CUIRASS", "FORGE FIRE",
+      "ANVIL", "DUELLING"
+    ]
+  },
+  {
+    id: 84,
+    title: "DELLA ROBBIA TERRACOTTA",
+    subtitle: "Glazed Polychrome Enamels of Florence",
+    words: [
+      "DELLA ROBBIA", "LUCA ROBBIA", "GLAZED POTTERY", "POLYCHROME",
+      "TIN GLAZE", "CERAMIC", "BLUE AND WHITE", "MADONNA",
+      "ROUNDEL", "LILY GARLAND", "ENAMEL", "KILN FIRE",
+      "WORKSHOP", "INNOCENTI BABES", "SCULPTURE", "DURABLE",
+      "DEVOTION", "LUSTRE"
+    ]
+  },
+  {
+    id: 85,
+    title: "FLORENTINE CARNIVAL SONGS",
+    subtitle: "Canti Carnascialeschi of Lorenzo's Circle",
+    words: [
+      "CARNASCIALE", "CARNIVAL SONG", "TRIUMPH MARCH", "MASQUERADE",
+      "LORENZO POEM", "CHORUS", "STREET FEAST", "TORCHLIGHT",
+      "BACCHUS", "ARIADNE", "FESTIVE FLOAT", "DANCING",
+      "LUTE GUITAR", "MELODY", "TUSCAN VERSE", "MERRIMENT",
+      "PAGEANTRY", "CELEBRATION"
+    ]
+  },
+  {
+    id: 86,
+    title: "SANTA MADDALENA DEI PAZZI",
+    subtitle: "Perugino's Luminous Crucifixion Fresco",
+    words: [
+      "PERUGINO", "CRUCIFIXION", "CHAPTER HOUSE", "UMBRIA MASTER",
+      "LUMINOUS SKY", "CALM HORIZON", "SYMMETRY", "MARY VIRGIN",
+      "JOHN APOSTLE", "CONTEMPLATION", "FRESCO WALL", "CLOISTER",
+      "SERENITY", "DEVOTION", "ELEGANT POSE", "TRANQUIL",
+      "SACRED ART", "PIETY"
+    ]
+  },
+  {
+    id: 87,
+    title: "THE GUILD OF SHOEMAKERS",
+    subtitle: "Arte dei Calzolai & Florentine Leathercraft",
+    words: [
+      "CALZOLAI", "LEATHER BOOT", "SANDAL", "COBBLER",
+      "TANNING VAT", "AWL NEEDLE", "WAXED THREAD", "SANTA CROCE",
+      "GUILD ARMS", "LEATHER GUILD", "WORKSHOP", "HIDE LEATHER",
+      "CUSTOM SHOE", "SLIPPER", "TUSCAN CRAFT", "MARKET PLACE",
+      "POPULO", "HANDMADE"
+    ]
+  },
+  {
+    id: 88,
+    title: "LOGGIA DEI LANZI",
+    subtitle: "The Open-Air Sculpture Gallery of Piazza Signoria",
+    words: [
+      "LOGGIA LANZI", "ORCAGNA ARCH", "CORINTHIAN", "SIGNORIA",
+      "PERSEUS STATUE", "CELLINI", "RAPE OF SABINES", "GIAMBOLOGNA",
+      "HERCULES NESSUS", "MARBLE PATINA", "OPEN AIR", "COLONNADE",
+      "CIVIC FORUM", "SPECTACLE", "CEREMONY", "MONUMENT",
+      "PUBLIC ART", "BRONZE"
+    ]
+  },
+  {
+    id: 89,
+    title: "THE LAURENTIAN LIBRARY",
+    subtitle: "Michelangelo's Tripartite Curved Staircase",
+    words: [
+      "LAURENZIANA", "MICHELANGELO", "RICETTO STAIR", "CURVED STEPS",
+      "SAN LORENZO", "READING ROOM", "WOOD BENCHES", "PLUTEI",
+      "MANUSCRIPTS", "MEDICI CODICES", "TERRACOTTA TILE", "TABERNACLE",
+      "PILASTER", "MANNERIST", "ORDER", "ARCHITECT",
+      "SCHOLAR DESK", "LIBRARY"
+    ]
+  },
+  {
+    id: 90,
+    title: "THE FLORENTINE ZECCA",
+    subtitle: "The Mint and Guild of Money Changers",
+    words: [
+      "ZECCA MINT", "COINING PRESS", "FLORIN GOLD", "DIE STAMP",
+      "ASSAY MASTER", "CAMBIO GUILD", "SCALES WEIGHT", "BULLION",
+      "MELTING CRUCIBLE", "SAN GIOVANNI", "PURITY TEST", "BANKERS",
+      "TREASURY", "COINAGE", "PIAZZA SIGNORIA", "HARD CURRENCY",
+      "STANDARD", "ENTERPRISE"
+    ]
+  },
+  {
+    id: 91,
+    title: "FLORENTINE TAPESTRIES",
+    subtitle: "The Grand Ducal Arazzeria Medicea",
+    words: [
+      "ARAZZERIA", "MEDICI WEAVING", "FLEMISH MASTER", "HIGH WARP",
+      "SILK WOOL", "GOLD THREAD", "CARTOON SKETCH", "BRONZINO CARTOON",
+      "SALVIATI", "GROTESQUE", "TAPESTRY", "DYED YARN",
+      "LOOM WORKER", "PALACE HANGING", "COURT OPULENCE", "WEAVING",
+      "MEDICI DUCHY", "MAGNIFICENCE"
+    ]
+  },
+  {
+    id: 92,
+    title: "THE ORDER OF SANTO STEFANO",
+    subtitle: "Cosimo I's Knights of Maritime Defense",
+    words: [
+      "SANTO STEFANO", "KNIGHTS ORDER", "COSIMO FIRST", "PISA HEADQUART",
+      "RED CROSS EMBLEM", "GALLEY FLEET", "MEDITERRANEAN", "DEFENSE",
+      "LEPANTO BATTLE", "ISLAND OF ELBA", "PIRATE COMBAT", "NAVAL BASE",
+      "WARSHIPS", "CRUSADE", "MARITIME", "ADMIRAL",
+      "HONOR", "SOVEREIGN"
+    ]
+  },
+  {
+    id: 93,
+    title: "TUSCAN OLIVE HARVEST",
+    subtitle: "Frantoio Pressing & Extra Virgin Olive Oil",
+    words: [
+      "OLIVE HARVEST", "FRANTOIO", "STONE WHEEL", "OIL PRESS",
+      "TERRACOTTA JAR", "ORCI JAR", "EXTRA VIRGIN", "GREEN GOLD",
+      "GROVES HILL", "HARVEST NETS", "TUSCAN SOIL", "AUTUMN MONTHS",
+      "PRUNING", "PRESSING CAKE", "AGRICULTURE", "RURAL LIFE",
+      "TASTING", "NOURISH"
+    ]
+  },
+  {
+    id: 94,
+    title: "ALBERTI'S VEIL & PERSPECTIVE",
+    subtitle: "The Grid Geometry of Renaissance Drawing",
+    words: [
+      "PERSPECTIVE", "ALBERTI VEIL", "GRID VELO", "VANISHING POINT",
+      "HORIZON LINE", "PROPORTION", "SIGHT CONE", "DRAWING FRAME",
+      "OPTICS", "MATHEMATICS", "FORESHORTEN", "GEOMETER",
+      "MEASUREMENT", "CONVERGENCE", "TREATISE", "SURFACE",
+      "SCALE", "DIMENSION"
+    ]
+  },
+  {
+    id: 95,
+    title: "THE BADIA FIORENTINA",
+    subtitle: "Ancient Benedictine Abbey in Dante's Ward",
+    words: [
+      "BADIA ABBEY", "BENEDICTINE", "COUNT UGO", "MONASTERY",
+      "HEXAGONAL TOWER", "FILIPPINO LIPPI", "VISION BERNARD", "BELL CHIME",
+      "DANTE PARISH", "CLOISTER ORANGE", "CHURCH", "MONKS CHOIR",
+      "GOTHIC NAVE", "HISTORIC CORE", "BARGELLO OPPOSITE", "SANCTUARY",
+      "SACRED", "SERENITY"
+    ]
+  },
+  {
+    id: 96,
+    title: "THE PALIO OF SAN GIOVANNI",
+    subtitle: "The Great Florentine Midsummer Chariot & Horse Race",
+    words: [
+      "SAN GIOVANNI", "PALIO RACE", "BARBERI HORSES", "MIDSUMMER",
+      "SILK BANNER", "START CORSO", "PORTA PRATO", "SANTA CROCE",
+      "CROWD CHEER", "JOCKEY", "FLAG FLOURISH", "PATRON SAINT",
+      "CEREMONY", "TRIUMPH", "SUMMER FEAST", "PROCESSION",
+      "CITY VICTORY", "SPECTACLE"
+    ]
+  },
+  {
+    id: 97,
+    title: "RENAISSANCE ASTROLABES",
+    subtitle: "Florentine Scientific Instruments & Astronomy",
+    words: [
+      "ASTROLABE", "BRASS SPHERE", "ARMILLARY", "QUADRANT",
+      "GNOMON", "MERIDIAN", "SUNDIAL", "CELESTIAL",
+      "HOROSCOPE", "ASTRONOMER", "CALCULATION", "ECLIPTIC",
+      "STAR MAPPING", "ALTITUDE", "PLANETARY", "TOSCANELLI",
+      "MEASURE", "OBSERVATION"
+    ]
+  },
+  {
+    id: 98,
+    title: "THE ARNO RIVER FLOODS",
+    subtitle: "Hydraulic Engineering & Florentine Bridges",
+    words: [
+      "ARNO RIVER", "FLOOD WATERS", "WEIR LEVEE", "EMBANKMENT",
+      "PONTE VECCHIO", "PONTE CARRAIA", "SANTA TRINITA", "RIVER CURRENT",
+      "MUD SILT", "WATER LEVEL", "ENGINEERING", "CANALIZATION",
+      "LEONARDO SCHEME", "BRIDGES", "HIGH WATER", "RECONSTRUCT",
+      "WATERSHED", "TUSCAN RAIN"
+    ]
+  },
+  {
+    id: 99,
+    title: "MEDICI & STROZZI RIVALRY",
+    subtitle: "Banking Dynasties & Political Hegemony",
+    words: [
+      "STROZZI FAMILY", "MEDICI DYNASTY", "RIVAL PALACES", "EXILE RETURN",
+      "FILIPPO STROZZI", "BANKING CLASH", "FACTIONS", "INFLUENCE",
+      "ALLIANCE", "MARRIAGE DOWRY", "WEALTH", "POWER STRUGGLE",
+      "TUSCAN NOBILITY", "PATRON CONTEST", "MONTEMURLO", "FORTUNE",
+      "HEGEMONY", "PRESTIGE"
+    ]
+  },
+  {
+    id: 100,
+    title: "THE ETERNAL CITY OF THE LILY",
+    subtitle: "The Living Heritage of Renaissance Florence",
+    words: [
+      "FIORENZA", "RED LILY", "GIGLIO CREST", "CRADLE CULTURE",
+      "MASTERPIECE", "MONUMENTS", "TIMELESS ART", "HUMANIST SPIRIT",
+      "DUOMO CROWN", "ARNO BRIDGES", "TUSCAN SUN", "PATRIMONY",
+      "LIVING MEMORY", "UNIVERSAL", "BEAUTY", "ENDEAVOR",
+      "IMMORTAL", "FLORENCE"
+    ]
   }
 ];
 
@@ -1107,8 +1347,8 @@ for (const p of puzzlesData) {
   });
 }
 
-const outPath = path.join(__dirname, 'data', 'all_80_puzzles.json');
+const outPath = path.join(__dirname, 'data', 'all_100_puzzles.json');
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, JSON.stringify(completeBookData, null, 2));
 
-console.log(`Successfully generated and saved all 80 puzzles with 100% placement to: ${outPath}`);
+console.log(`Successfully generated and saved all ${completeBookData.length} puzzles with 100% placement to: ${outPath}`);
