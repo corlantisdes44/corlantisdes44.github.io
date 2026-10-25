@@ -143,15 +143,15 @@ doc.addPage({ size: [PAGE_W, PAGE_H], margin: 0 });
 const b2 = getPageBounds(2);
 drawCleanPageGround(b2, false);
 
-const crY = 620;
+const crY = 625;
 doc.strokeColor('#3a3530').lineWidth(0.6)
-   .moveTo(b2.left + 50, crY).lineTo(b2.right - 50, crY).stroke();
+   .moveTo(b2.left + 60, crY).lineTo(b2.right - 60, crY).stroke();
 
 doc.fillColor('#111111').font('Times-Bold').fontSize(9)
    .text('Historical Word Search: Florence (1450-1550 AD)', b2.left, crY + 16, { width: b2.width, align: 'center' });
 
 doc.fillColor('#444444').font('Times-Roman').fontSize(8)
-   .text('The Spatiotemporal Puzzle Series - Volume 001\nSeries Archival Classification: 02.380.09.0501.1450.1550.001\nPublished by TheBookGuy Press\nOnline Storefront: https://corlantisdes44.github.io\n\nCopyright (c) 2026 TheBookGuy Press. All rights reserved.\nPrinted on Archival 55# Cream Paper - Large Print 16x16 Edition\nFirst Edition: Autumn 2026\nPrinted in the United States of America', b2.left, crY + 30, { width: b2.width, align: 'center', lineGap: 3 });
+   .text('The Spatiotemporal Puzzle Series - Volume 001\nClassification Code: 02.380.09.0501.1450.1550.001\n\nPublished by TheBookGuy Press\nhttps://corlantisdes44.github.io\n\nCopyright (c) 2026 TheBookGuy Press. All rights reserved.\nFirst Edition', b2.left, crY + 30, { width: b2.width, align: 'center', lineGap: 3.5 });
 
 
 // ==========================================
@@ -394,46 +394,49 @@ doc.fillColor('#4a4035').font('Times-Bold').fontSize(8.5)
 
 
 // ==========================================
-// PAGE 107: SERIES CATALOG & NOTES (Recto)
+// PAGE 107: FLORENTINE HISTORICAL CHRONOLOGY (Recto)
 // ==========================================
-console.log("Compiling Page 107: Series Catalog & Notes...");
+console.log("Compiling Page 107: Historical Chronology...");
 doc.addPage({ size: [PAGE_W, PAGE_H], margin: 0 });
 const b107 = getPageBounds(107);
 drawCleanPageGround(b107, false);
 
 doc.fillColor('#222222').font('Times-Bold').fontSize(12)
-   .text('THE SPATIOTEMPORAL PUZZLE SERIES', b107.left, 46, { width: b107.width, align: 'center', characterSpacing: 1.5 });
+   .text('FLORENTINE HISTORICAL CHRONOLOGY', b107.left, 46, { width: b107.width, align: 'center', characterSpacing: 1.5 });
 doc.fillColor('#555555').font('Times-Italic').fontSize(8.5)
-   .text('Place x Epoch Historical Word Search Volumes', b107.left, 62, { width: b107.width, align: 'center' });
+   .text('Pivotal Milestones of the High Renaissance (1450-1550 AD)', b107.left, 62, { width: b107.width, align: 'center' });
 doc.strokeColor('#3a3530').lineWidth(0.8)
-   .moveTo(b107.left + 60, 76).lineTo(b107.right - 60, 76).stroke();
+   .moveTo(b107.left + 50, 76).lineTo(b107.right - 50, 76).stroke();
 
-const upcomingVolumes = [
-  { vol: "VOLUME 001", title: "FLORENCE: THE HIGH RENAISSANCE (1450-1550 AD)", status: "AVAILABLE NOW", desc: "100 Large-Print Puzzles chronicling Brunelleschi, Leonardo, Michelangelo, and the Medici dynasty." },
-  { vol: "VOLUME 002", title: "VENICE: MARITIME EMPIRE & SERENISSIMA (1475-1575 AD)", status: "COMING SOON", desc: "100 Puzzles navigating the Grand Canal, Venetian galleys, glassmakers of Murano, and Titian." },
-  { vol: "VOLUME 003", title: "KYOTO: THE MOMOYAMA & EARLY EDO ERA (1568-1638 AD)", status: "IN DEVELOPMENT", desc: "100 Puzzles celebrating samurai castles, tea ceremonies, Zen rock gardens, and traditional woodblock masters." },
-  { vol: "VOLUME 004", title: "ROME: THE PAPAL STATE & RENAISSANCE (1500-1580 AD)", status: "IN DEVELOPMENT", desc: "100 Puzzles exploring the Sistine Chapel, St. Peter's Basilica, Raphael's Stanze, and ancient forums." },
-  { vol: "VOLUME 005", title: "LONDON: THE ELIZABETHAN & JACOBEAN AGE (1558-1625 AD)", status: "SCHEDULED", desc: "100 Puzzles exploring Shakespeare's Globe, the Thames river trade, Galleon explorers, and London guilds." }
+const timelineEvents = [
+  { year: "1452", desc: "Leonardo da Vinci is born in Anchiano near Vinci; later enters Andrea del Verrocchio's Florentine bottega." },
+  { year: "1464", desc: "Cosimo de' Medici ('Pater Patriae') dies; leadership of the family bank passes to Piero the Gouty." },
+  { year: "1469", desc: "Lorenzo de' Medici ('Il Magnifico') assumes de facto governance of Florence, opening the Golden Age of patronal humanism." },
+  { year: "1475", desc: "Michelangelo Buonarroti is born in Caprese; later studies classical sculpture in Lorenzo's San Marco garden." },
+  { year: "1478", desc: "The Pazzi Conspiracy unfolds in the Duomo; Giuliano de' Medici is assassinated; Lorenzo narrowly escapes." },
+  { year: "1485", desc: "Sandro Botticelli completes The Birth of Venus and Primavera for the Medici country estates." },
+  { year: "1494", desc: "Charles VIII of France invades Italy; the Medici are expelled; Fra Girolamo Savonarola establishes a strict theocratic republic." },
+  { year: "1497", desc: "Savonarola stages the Bonfire of the Vanities in Piazza della Signoria; executed at the stake the following year." },
+  { year: "1504", desc: "Michelangelo's colossal marble David is unveiled outside Palazzo Vecchio as the supreme civic symbol of the Republic." },
+  { year: "1512", desc: "The Medici dynasty returns to Florence with Spanish papal arms; Niccolo Machiavelli is dismissed from the Chancery and writes The Prince." },
+  { year: "1530", desc: "The heroic Siege of Florence ends after ten months; the Republic falls; the Medici are restored as hereditary Dukes." },
+  { year: "1550", desc: "Giorgio Vasari publishes The Lives of the Artists (Le Vite), establishing the first formal art historical canon." }
 ];
 
-let cy = 96;
-upcomingVolumes.forEach(v => {
-  doc.fillColor('#8a5a36').font('Times-Bold').fontSize(8.5).text(v.vol, b107.left + 16, cy);
-  doc.fillColor(v.status === 'AVAILABLE NOW' ? '#2e6b36' : '#666666').font('Times-Bold').fontSize(7.5).text(v.status, b107.right - 120, cy, { width: 104, align: 'right' });
-  cy += 13;
-  doc.fillColor('#111111').font('Times-Bold').fontSize(9).text(v.title, b107.left + 16, cy);
-  cy += 13;
-  doc.fillColor('#444444').font('Times-Roman').fontSize(8).text(v.desc, b107.left + 16, cy, { width: b107.width - 32, lineGap: 2.5 });
-  cy += 24;
+let ty = 92;
+timelineEvents.forEach(e => {
+  doc.fillColor('#8a5a36').font('Courier-Bold').fontSize(9).text(e.year, b107.left + 16, ty);
+  doc.fillColor('#222222').font('Times-Roman').fontSize(8.2).text(e.desc, b107.left + 64, ty, { width: b107.width - 80, lineGap: 2 });
+  ty += 23.5;
 });
 
-// Digital Storefront Callout
+// Evergreen Archive Stamp
 doc.save();
-doc.rect(b107.left + 30, cy + 10, b107.width - 60, 48).fillAndStroke('#ffffff', '#3a3530');
+doc.rect(b107.left + 30, ty + 12, b107.width - 60, 44).fillAndStroke('#ffffff', '#3a3530');
 doc.fillColor('#111111').font('Times-Bold').fontSize(8.5)
-   .text('EXPLORE THE COMPLETE ARCHIVE ONLINE', b107.left + 30, cy + 20, { width: b107.width - 60, align: 'center', characterSpacing: 1 });
+   .text('THE SPATIOTEMPORAL PUZZLE SERIES // ARCHIVE 001', b107.left + 30, ty + 22, { width: b107.width - 60, align: 'center', characterSpacing: 1 });
 doc.fillColor('#5a4a3a').font('Courier-Bold').fontSize(8.5)
-   .text('https://corlantisdes44.github.io', b107.left + 30, cy + 34, { width: b107.width - 60, align: 'center' });
+   .text('https://corlantisdes44.github.io', b107.left + 30, ty + 35, { width: b107.width - 60, align: 'center' });
 doc.restore();
 
 doc.fillColor('#4a4035').font('Times-Bold').fontSize(8.5)

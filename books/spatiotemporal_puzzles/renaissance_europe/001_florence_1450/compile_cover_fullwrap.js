@@ -351,10 +351,18 @@ doc.fillColor('#333333').font('Times-Roman').fontSize(8.5)
    .text('1,800 WORDS', sealCenterX - 50, sealCenterY + 16, { width: 100, align: 'center' });
 doc.restore();
 
-// 5. VALUE PROPOSITION CHECKMARKS UNDER GRID
-const checkY = pRowY + pGridW + 20;
-doc.fillColor('#ffffff').font('Times-Bold').fontSize(9.5)
-   .text('* 16x16 Matrices     * One Puzzle Per Page     * Historical Glossary Included', fContentX, checkY, { width: fContentW, align: 'center' });
+// 5. HIGH-CONTRAST VALUE PROPOSITION PILL (Bold, Dark-Gold Frame for Maximum Visibility)
+const pillW = fContentW - 20;
+const pillH = 28;
+const pillX = fContentX + 10;
+const pillY = pRowY + pGridW + 16;
+
+doc.save();
+doc.rect(pillX, pillY, pillW, pillH).fillOpacity(0.92).fill('#16100b');
+doc.rect(pillX, pillY, pillW, pillH).strokeColor('#d4af37').lineWidth(1.2).stroke();
+doc.fillColor('#ffffff').font('Times-Bold').fontSize(10.5)
+   .text('* 16x16 Matrices    * One Puzzle Per Page    * Historical Glossary Included', pillX, pillY + 7.5, { width: pillW, align: 'center', characterSpacing: 0.5 });
+doc.restore();
 
 // 6. BOTTOM ARCHIVAL REGISTRY PILL
 const btmBoxY = TOTAL_H - BLEED - 130;
