@@ -3,123 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TheBookGuy — The Spatiotemporal Archive & Physical Books</title>
-  <meta name="description" content="Curated large-print history puzzles, field logs, and tangible paperbacks cataloged by geographic location and historical era.">
+  <title>TheBookGuy — Spatiotemporal Cartographic Archive</title>
+  <meta name="description" content="An archival catalog of physical books, large-print historical puzzles, and field records indexed by spatiotemporal numeric coordinates.">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Top Announcement Bar (Coral Crimson Hue 5) -->
-  <header class="promo-bar">
-    <div class="promo-content">
-      <span class="badge-live">24-HR LAUNCH SPECIAL</span>
-      <span>Get <strong>10% OFF</strong> select paperback editions direct on Amazon. Limited launch copies.</span>
-    </div>
-  </header>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="brand-logo">
-        <span class="logo-icon">📖</span>
-        <span class="brand-name">TheBook<span class="highlight">Guy</span></span>
+  <!-- Minimalist Navigation Bar -->
+  <nav class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-monogram">TBG</span>
+        <span class="brand-title">TheBookGuy <span class="brand-sub">/ Archive</span></span>
       </a>
-      <div class="nav-links">
-        <a href="#catalog" class="nav-link">Catalog</a>
-        <button class="nav-link btn-archive-vault" id="open-vault-btn">
-          <span class="vault-icon">⌨️</span> Code Terminal
+      <div class="header-nav">
+        <a href="#catalog" class="nav-item">Catalog</a>
+        <button class="nav-item btn-vault-trigger" id="open-vault-btn">
+          <span class="vault-dot"></span> Coordinate Index
         </button>
-        <a href="https://amazon.com" target="_blank" rel="noopener" class="btn-nav-amazon">Amazon Store ↗</a>
+        <a href="https://amazon.com" target="_blank" rel="noopener" class="nav-btn-link">Amazon Catalog ↗</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-container">
-      <span class="hero-badge">SPATIOTEMPORAL ARCHIVE // PHYSICAL EDITIONS</span>
-      <h1 class="hero-title">Mapped by <span class="gradient-text">Place & Era</span></h1>
-      <p class="hero-subtitle">
-        Every book holds an exact archival coordinate in human history. Engineered large-print puzzles and tactile journals built for screen-free immersion.
+  <!-- Editorial Hero Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <div class="archive-label">ARCHIVAL SPATIOTEMPORAL INDEX</div>
+      <h1 class="hero-heading">Humanity Recorded Across <span class="italic-serif">Place & Epoch</span></h1>
+      <p class="hero-lede">
+        A structured catalog of physical paperbacks. Every volume represents a deterministic intersection of geography and historical time, bound with large-print clarity for tactile, screen-free study.
       </p>
       <div class="hero-actions">
-        <a href="#catalog" class="btn-primary">Explore The Archive ↓</a>
-        <button class="btn-secondary" id="hero-vault-btn">Enter Archival Code</button>
+        <a href="#catalog" class="btn-discover">Browse Collection</a>
+        <button class="btn-terminal" id="hero-vault-btn">Search Numeric Index [ 0–9 ]</button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Filter & Catalog Section -->
+  <!-- Catalog Section -->
   <main class="catalog-section" id="catalog">
-    <div class="section-container">
-      <div class="catalog-header">
+    <div class="catalog-container">
+      <div class="catalog-toolbar">
         <div>
-          <h2 class="section-title">The Master Library</h2>
-          <p class="section-desc">Classified by spatiotemporal coordinates. Select any volume to view details and order on Amazon.</p>
+          <h2 class="collection-title">Published Editions</h2>
+          <p class="collection-sub">Physical 8.5" × 11" paperbacks fulfilled on demand via Amazon.</p>
         </div>
-        <div class="category-filters">
-          <button class="filter-btn active" data-filter="all">All Volumes</button>
-          <button class="filter-btn" data-filter="puzzles">History & Puzzles</button>
-          <button class="filter-btn" data-filter="journals">Field Logs</button>
+        <div class="filter-group">
+          <button class="filter-pill active" data-filter="all">All Records</button>
+          <button class="filter-pill" data-filter="puzzles">Chronological Puzzles</button>
+          <button class="filter-pill" data-filter="logs">Field Journals</button>
         </div>
       </div>
 
-      <!-- Book Grid Container (Dynamically Rendered & Deep-Link Enabled) -->
+      <!-- Book Grid Container -->
       <div class="book-grid" id="book-grid">
         <!-- Rendered by app.js -->
       </div>
     </div>
   </main>
 
-  <!-- Archival Code Lookup Drawer / Modal -->
+  <!-- Dedicated Numeric Coordinate Index Drawer -->
   <div class="vault-modal" id="vault-modal">
-    <div class="vault-overlay" id="vault-overlay"></div>
-    <div class="vault-card">
-      <button class="vault-close" id="vault-close">&times;</button>
-      <div class="vault-header">
-        <span class="vault-chip">ARCHIVAL TERMINAL</span>
-        <h3 class="vault-title">Decode Book Coordinates</h3>
-        <p class="vault-sub">Enter the code printed on the top corner of your book cover (e.g. <code>EU.ITA.TOS.FLR.1450.1550.01</code>)</p>
+    <div class="vault-backdrop" id="vault-overlay"></div>
+    <div class="vault-panel">
+      <div class="vault-panel-header">
+        <div class="vault-panel-title">
+          <span class="vault-mono-prefix">// REGISTRY</span>
+          <h3>Numeric Coordinate Terminal</h3>
+        </div>
+        <button class="vault-close-btn" id="vault-close" aria-label="Close terminal">&times;</button>
+      </div>
+      
+      <p class="vault-instruction">
+        Enter the 7-tier numeric code located in the upper corner of your book cover:
+        <br><code>02.380.09.0501.1450.1550.001</code>
+      </p>
+
+      <div class="terminal-bar">
+        <span class="terminal-caret">&gt;</span>
+        <input type="text" id="vault-code-input" placeholder="00.000.00.0000.0000.0000.000" autocomplete="off" spellcheck="false">
+        <button id="vault-submit-btn">LOCATE</button>
       </div>
 
-      <div class="vault-input-group">
-        <input type="text" id="vault-code-input" placeholder="CONT.CTRY.REG.LOC.TIME.VOL" autocomplete="off" spellcheck="false">
-        <button id="vault-submit-btn">Decode ↵</button>
+      <div class="code-shortcuts">
+        <span class="shortcut-label">Sample Coordinates:</span>
+        <button class="shortcut-pill" data-code="02.380.09.0501.1450.1550.001">02.380.09.0501.1450.1550.001 (Florence)</button>
+        <button class="shortcut-pill" data-code="01.818.04.0042.2550.2490.001">01.818.04.0042.2550.2490.001 (Giza)</button>
+        <button class="shortcut-pill" data-code="03.392.13.0108.1603.1867.001">03.392.13.0108.1603.1867.001 (Edo)</button>
       </div>
 
-      <!-- Quick Code Shortcuts -->
-      <div class="vault-shortcuts">
-        <span>Try these archival codes:</span>
-        <button class="code-pill" data-code="EU.ITA.TOS.FLR.1450.1550.01">Florence (1450–1550)</button>
-        <button class="code-pill" data-code="AF.EGY.GZ.GIZA.B2550.B2490.01">Giza (2550–2490 BCE)</button>
-        <button class="code-pill" data-code="AS.JPN.KT.EDO.1603.1867.01">Edo Japan (1603–1867)</button>
-      </div>
-
-      <div class="vault-result" id="vault-result">
-        <!-- Decoded coordinates display here -->
+      <div class="terminal-output" id="vault-result">
+        <!-- Decoded terminal breakdown rendered dynamically -->
       </div>
     </div>
   </div>
 
-  <!-- Preview Interior Modal -->
+  <!-- Detail & Interior Preview Modal -->
   <div class="preview-modal" id="preview-modal">
-    <div class="modal-overlay" id="modal-overlay"></div>
-    <div class="modal-card">
-      <button class="modal-close" id="modal-close">&times;</button>
-      <div class="modal-body" id="modal-body">
-        <!-- Dynamic content -->
+    <div class="modal-backdrop" id="modal-overlay"></div>
+    <div class="modal-sheet">
+      <button class="modal-close-btn" id="modal-close">&times;</button>
+      <div class="modal-content-area" id="modal-body">
+        <!-- Dynamic interior specifications -->
       </div>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <p>© 2026 TheBookGuy Archive. Printed and fulfilled via Amazon KDP.</p>
-      <p class="footer-sub">Spatiotemporal Publishing Framework • Curated for tactile learners and historical thinkers.</p>
+  <!-- Minimalist Archival Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">TheBookGuy Archive</div>
+      <p class="footer-note">Printed on-demand via Amazon KDP • Standardized 8.5" × 11" Physical Formats.</p>
+      <div class="footer-meta">Numeric Registry System • Independent Editorial Studio</div>
     </div>
   </footer>
 

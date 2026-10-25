@@ -1,118 +1,132 @@
-// TheBookGuy Spatiotemporal Catalog & Archival Terminal Engine
+// TheBookGuy Spatiotemporal Cartographic Archive Engine
 document.addEventListener("DOMContentLoaded", () => {
-  const books = [
+  const archiveRecords = [
     {
-      id: "vol-1-world-history",
-      archivalCode: "EU.ITA.TOS.FLR.1450.1550.01",
-      title: "Lost Civilizations & Ancient Empires",
-      series: "Spatiotemporal Puzzle Series — Volume 1",
+      id: "rec-florence-renaissance",
+      numericCode: "02.380.09.0501.1450.1550.001",
+      geoMeta: {
+        continent: "02 (Europe)",
+        country: "380 (Italy)",
+        region: "09 (Tuscany)",
+        location: "0501 (Florence)",
+        epoch: "1450 – 1550 AD",
+        volume: "001"
+      },
+      title: "Florence: The High Renaissance",
       category: "puzzles",
-      hueCategory: "hue-blue",
-      priceCurrent: "$8.99",
-      priceRegular: "$10.99",
-      discountBadge: "10% LAUNCH DEAL",
-      specs: "100 Pages • 8.5\" × 11\" • Large Print 18pt",
-      coverAccent: "linear-gradient(135deg, #1e3a5f 0%, #0d1b2a 100%)",
-      coverTitle: "LOST CIVILIZATIONS & ANCIENT EMPIRES",
-      coverSub: "LARGE PRINT HISTORICAL WORD SEARCH & TRIVIA",
-      description: "Explore 80 historical puzzles across Ancient Egypt, Edo Japan, Roman Britannia, and the Silk Road. Designed with 18pt high-contrast typography for effortless reading.",
+      format: "Physical Paperback",
+      price: "$8.99",
+      specs: "100 Pages • 8.5\" × 11\" • Large-Print 18pt",
+      eraTag: "EPOCH 1450–1550 AD // TUSCANY",
+      blurb: "80 curated historical word matrices capturing Brunelleschi's dome, Medici workshops, guild ledgers, and bottega artisans. Printed in high-contrast 18pt typography.",
       amazonUrl: "https://amazon.com",
-      previewPages: [
-        "80 Themed Historical Puzzles",
-        "Short Historical Context Snippets on Every Page",
-        "16×16 Large-Print Letter Matrices (No eye strain)",
-        "Archival Coordinates & Solution Keys at the Back (Pages 81–100)"
+      previewSpecs: [
+        "80 Themed Historical Word Searches with Micro-Histories",
+        "Large-Print 16×16 Letter Matrix (Engineered for Zero Eye Strain)",
+        "Standardized 8.5\" × 11\" Cream Interior Format",
+        "Full Solution Appendices in Back Matter (Pages 81–100)"
       ]
     },
     {
-      id: "vol-2-giza-pyramids",
-      archivalCode: "AF.EGY.GZ.GIZA.B2550.B2490.01",
-      title: "The Dynastic Nile: Old Kingdom Pyramids",
-      series: "Spatiotemporal Puzzle Series — Volume 2",
+      id: "rec-giza-dynastic",
+      numericCode: "01.818.04.0042.2550.2490.001",
+      geoMeta: {
+        continent: "01 (Africa)",
+        country: "818 (Egypt)",
+        region: "04 (Lower Nile)",
+        location: "0042 (Giza Necropolis)",
+        epoch: "2550 – 2490 BCE",
+        volume: "001"
+      },
+      title: "Giza: The Fourth Dynasty",
       category: "puzzles",
-      hueCategory: "hue-amber",
-      priceCurrent: "$8.99",
-      priceRegular: "$10.99",
-      discountBadge: "VOLUME 2",
-      specs: "100 Pages • 8.5\" × 11\" • Large Print 18pt",
-      coverAccent: "linear-gradient(135deg, #78350f 0%, #291203 100%)",
-      coverTitle: "THE DYNASTIC NILE: OLD KINGDOM",
-      coverSub: "PYRAMID ARCHITECTURE & PHARAOHS",
-      description: "A deep dive into Old Kingdom engineering, hieroglyphic vocabulary, quarrying routes, and temple priests of 4th Dynasty Giza.",
+      format: "Physical Paperback",
+      price: "$8.99",
+      specs: "100 Pages • 8.5\" × 11\" • Large-Print 18pt",
+      eraTag: "EPOCH 2550–2490 BCE // NILE VALLEY",
+      blurb: "Old Kingdom quarry routes, limestone casing methods, astronomer priests, and seasonal flood logs. Systematic historical word matrices with archival notes.",
       amazonUrl: "https://amazon.com",
-      previewPages: [
-        "80 Fourth Dynasty Historical Word Searches",
-        "Hieroglyphic Transliteration & Vocabulary Lists",
-        "100% Large-Print 18pt High-Contrast Grid"
+      previewSpecs: [
+        "80 Fourth Dynasty Architectural Word Searches",
+        "Hieroglyphic Transliteration Glossaries on Every Page",
+        "18pt High-Contrast Large-Print Layout",
+        "Complete Solution Appendix (Pages 81–100)"
       ]
     },
     {
-      id: "vol-3-edo-japan",
-      archivalCode: "AS.JPN.KT.EDO.1603.1867.01",
-      title: "Edo Period Japan: Shoguns & Castles",
-      series: "Spatiotemporal Puzzle Series — Volume 3",
+      id: "rec-edo-shogunate",
+      numericCode: "03.392.13.0108.1603.1867.001",
+      geoMeta: {
+        continent: "03 (Asia)",
+        country: "392 (Japan)",
+        region: "13 (Kanto Plain)",
+        location: "0108 (Edo Castle & Nihonbashi)",
+        epoch: "1603 – 1867 AD",
+        volume: "001"
+      },
+      title: "Edo: The Shogunate Castle Towns",
       category: "puzzles",
-      hueCategory: "hue-crimson",
-      priceCurrent: "$8.99",
-      priceRegular: "$10.99",
-      discountBadge: "VOLUME 3",
-      specs: "100 Pages • 8.5\" × 11\" • Large Print 18pt",
-      coverAccent: "linear-gradient(135deg, #4c0519 0%, #1a0208 100%)",
-      coverTitle: "EDO PERIOD JAPAN: SHOGUNS & CASTLES",
-      coverSub: "FEUDAL CHRONICLES & WOODBLOCK LORE",
-      description: "Feudal castles, Tokaido post towns, artisan guilds, and samurai codes. Curated historical terms with micro-history notes.",
+      format: "Physical Paperback",
+      price: "$8.99",
+      specs: "100 Pages • 8.5\" × 11\" • Large-Print 18pt",
+      eraTag: "EPOCH 1603–1867 AD // KANTO",
+      blurb: "Tokaido highway stations, woodblock master studios, merchant guilds, and samurai civic architecture. Formatted for screen-free mental focus.",
       amazonUrl: "https://amazon.com",
-      previewPages: [
-        "80 Themed Edo Era Historical Puzzles",
-        "Tokaido Highway & Post Town Mapping",
-        "Complete Solution Grids at the Back"
+      previewSpecs: [
+        "80 Themed Edo Era Word Searches",
+        "Post-Station Road Itineraries & Cultural Glossaries",
+        "Engineered 18pt Typography for Comfortable Reading",
+        "Full Coordinate Solutions at the Back"
       ]
     }
   ];
 
   const grid = document.getElementById("book-grid");
-  const filterBtns = document.querySelectorAll(".filter-btn");
+  const filterPills = document.querySelectorAll(".filter-pill");
 
-  // Render Catalog Cards
-  function renderBooks(filteredList) {
+  // Render Grid
+  function renderCatalog(items) {
     grid.innerHTML = "";
-    filteredList.forEach(book => {
+    items.forEach(book => {
       const card = document.createElement("article");
-      card.className = `book-card ${book.hueCategory}`;
+      card.className = "book-card";
       card.id = book.id;
 
       card.innerHTML = `
-        <div class="card-mockup-wrap" style="background: ${book.coverAccent};">
-          <span class="card-code-corner">${book.archivalCode}</span>
-          <span class="card-badge">${book.discountBadge}</span>
-          <div class="book-spine-mockup">
-            <span class="spine-sub">${book.series.split("—")[0]}</span>
-            <div class="spine-cover-art">${book.coverTitle}</div>
-            <span class="spine-brand">THEBOOKGUY</span>
+        <div class="card-cover-stage">
+          <span class="card-coord-stamp">${book.numericCode}</span>
+          <span class="card-format-tag">${book.format}</span>
+          
+          <div class="book-physical-mockup">
+            <span class="mockup-header">${book.numericCode.slice(0, 10)}...</span>
+            <div class="mockup-title">${book.title}</div>
+            <div class="mockup-footer">
+              <span>VOL.${book.geoMeta.volume}</span>
+              <span>8.5×11"</span>
+            </div>
           </div>
         </div>
 
-        <div class="card-content">
-          <span class="card-category">${book.series}</span>
+        <div class="card-body">
+          <div class="card-era-tag">${book.eraTag}</div>
           <h3 class="card-title">${book.title}</h3>
-          <p class="card-description">${book.description}</p>
+          <p class="card-blurb">${book.blurb}</p>
           
           <div class="card-specs">
             <span>${book.specs}</span>
           </div>
 
-          <div class="card-pricing">
-            <span class="current-price">${book.priceCurrent}</span>
-            <span class="regular-price">${book.priceRegular}</span>
-            <span class="discount-tag">Amazon Launch Price</span>
+          <div class="card-commerce">
+            <div class="card-price">${book.price}</div>
+            <span class="card-price-note">Amazon Paperback</span>
           </div>
 
-          <div class="card-actions">
+          <div class="card-btn-stack">
             <a href="${book.amazonUrl}" target="_blank" rel="noopener" class="btn-buy-amazon">
-              Buy on Amazon ↗
+              Order on Amazon ↗
             </a>
-            <button class="btn-preview-interior" data-id="${book.id}">
-              Preview Interior Details
+            <button class="btn-inspect" data-id="${book.id}">
+              Inspect Edition Details
             </button>
           </div>
         </div>
@@ -121,51 +135,51 @@ document.addEventListener("DOMContentLoaded", () => {
       grid.appendChild(card);
     });
 
-    attachPreviewListeners();
+    bindPreviewEvents();
   }
 
   // Initial Render
-  renderBooks(books);
+  renderCatalog(archiveRecords);
 
-  // Category Filters
-  filterBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      const category = btn.getAttribute("data-filter");
-      if (category === "all") {
-        renderBooks(books);
+  // Filters
+  filterPills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      filterPills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+      const f = pill.getAttribute("data-filter");
+      if (f === "all") {
+        renderCatalog(archiveRecords);
       } else {
-        const filtered = books.filter(b => b.category === category);
-        renderBooks(filtered);
+        const filtered = archiveRecords.filter(item => item.category === f);
+        renderCatalog(filtered);
       }
-      checkDeepLink();
+      verifyDeepLink();
     });
   });
 
-  // Deep Linking & 2-Second Glow Animation
-  function checkDeepLink() {
+  // Deep Link Handling with 2.2-Second Halo Glow
+  function verifyDeepLink() {
     const params = new URLSearchParams(window.location.search);
-    const targetId = params.get("item") || window.location.hash.replace("#", "");
+    const target = params.get("item") || window.location.hash.replace("#", "");
 
-    if (targetId) {
-      const targetCard = document.getElementById(targetId);
-      if (targetCard) {
+    if (target) {
+      const card = document.getElementById(target);
+      if (card) {
         setTimeout(() => {
-          targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
-          targetCard.classList.add("highlight-glow");
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          card.classList.add("highlight-glow");
           setTimeout(() => {
-            targetCard.classList.remove("highlight-glow");
+            card.classList.remove("highlight-glow");
           }, 2200);
         }, 150);
       }
     }
   }
 
-  checkDeepLink();
-  window.addEventListener("hashchange", checkDeepLink);
+  verifyDeepLink();
+  window.addEventListener("hashchange", verifyDeepLink);
 
-  // Archival Code Terminal / Vault Logic
+  // Terminal Drawer & Numeric Code Decoder
   const vaultModal = document.getElementById("vault-modal");
   const openVaultBtn = document.getElementById("open-vault-btn");
   const heroVaultBtn = document.getElementById("hero-vault-btn");
@@ -174,133 +188,128 @@ document.addEventListener("DOMContentLoaded", () => {
   const vaultInput = document.getElementById("vault-code-input");
   const vaultSubmit = document.getElementById("vault-submit-btn");
   const vaultResult = document.getElementById("vault-result");
-  const codePills = document.querySelectorAll(".code-pill");
+  const shortcutPills = document.querySelectorAll(".shortcut-pill");
 
-  function openVault() {
+  function openTerminal() {
     vaultModal.classList.add("active");
     vaultInput.focus();
   }
 
-  function closeVault() {
+  function closeTerminal() {
     vaultModal.classList.remove("active");
   }
 
-  if (openVaultBtn) openVaultBtn.addEventListener("click", openVault);
-  if (heroVaultBtn) heroVaultBtn.addEventListener("click", openVault);
-  if (closeVaultBtn) closeVaultBtn.addEventListener("click", closeVault);
-  if (vaultOverlay) vaultOverlay.addEventListener("click", closeVault);
+  if (openVaultBtn) openVaultBtn.addEventListener("click", openTerminal);
+  if (heroVaultBtn) heroVaultBtn.addEventListener("click", openTerminal);
+  if (closeVaultBtn) closeVaultBtn.addEventListener("click", closeTerminal);
+  if (vaultOverlay) vaultOverlay.addEventListener("click", closeTerminal);
 
-  function decodeArchivalCode(code) {
-    const cleanCode = code.trim().toUpperCase();
-    const match = books.find(b => b.archivalCode.toUpperCase() === cleanCode);
+  function decodeNumericCode(code) {
+    const clean = code.trim();
+    const match = archiveRecords.find(r => r.numericCode === clean);
 
     vaultResult.classList.add("active");
 
     if (match) {
-      const parts = cleanCode.split(".");
-      const cont = parts[0];
-      const ctry = parts[1];
-      const reg = parts[2];
-      const loc = parts[3];
-      const timeStart = parts[4];
-      const timeEnd = parts[5];
-      const vol = parts[6];
-
+      const g = match.geoMeta;
       vaultResult.innerHTML = `
-        <div style="border-left: 3px solid var(--hue1-pure); padding-left: 14px; margin-bottom: 14px;">
-          <h4 style="color: var(--hue3-tint); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 4px;">
-            ✓ COORDINATES VERIFIED: ${match.title}
-          </h4>
-          <p style="color: var(--text-muted); font-size: 0.82rem; font-family: var(--font-mono);">
-            CATALOG REF: ${cleanCode}
-          </p>
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--glow-emerald); margin-bottom: 6px;">
+          // COORDINATE VERIFIED IN REGISTRY
         </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.8rem; margin-bottom: 16px; background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px;">
-          <div><strong style="color: var(--hue2-tint);">REGION:</strong> ${loc}, ${reg} (${ctry})</div>
-          <div><strong style="color: var(--hue2-tint);">CONTINENT:</strong> ${cont}</div>
-          <div><strong style="color: var(--hue3-tint);">ERA:</strong> ${timeStart} – ${timeEnd}</div>
-          <div><strong style="color: var(--hue1-tint);">VOLUME:</strong> #${vol}</div>
+        <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--tint-050); margin-bottom: 12px;">
+          ${match.title}
+        </h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--tint-300); margin-bottom: 18px; border-top: 1px solid var(--tone-700); padding-top: 12px;">
+          <div><span style="color: var(--tone-400);">CONTINENT:</span> ${g.continent}</div>
+          <div><span style="color: var(--tone-400);">COUNTRY:</span> ${g.country}</div>
+          <div><span style="color: var(--tone-400);">REGION:</span> ${g.region}</div>
+          <div><span style="color: var(--tone-400);">LOCATION:</span> ${g.location}</div>
+          <div><span style="color: var(--tone-400);">EPOCH:</span> ${g.epoch}</div>
+          <div><span style="color: var(--tone-400);">VOLUME:</span> #${g.volume}</div>
         </div>
         <div style="display: flex; gap: 10px;">
-          <button id="jump-to-book-btn" style="flex: 1; background: var(--hue1-pure); color: #000; border: none; padding: 10px; border-radius: 6px; font-weight: 700; cursor: pointer;">
-            Jump to Book Card ↓
+          <button id="vault-jump-btn" style="flex: 1; background: var(--tint-100); color: var(--shade-950); border: none; padding: 10px; font-size: 0.82rem; font-weight: 600; cursor: pointer; border-radius: var(--radius-xs);">
+            Locate Book on Shelf ↓
           </button>
-          <a href="${match.amazonUrl}" target="_blank" rel="noopener" style="flex: 1; background: var(--hue3-pure); color: #000; text-align: center; text-decoration: none; padding: 10px; border-radius: 6px; font-weight: 700;">
-            Buy on Amazon ↗
+          <a href="${match.amazonUrl}" target="_blank" rel="noopener" style="flex: 1; background: var(--shade-850); color: var(--tint-050); border: 1px solid var(--tone-600); text-align: center; padding: 10px; font-size: 0.82rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-xs);">
+            Amazon Listing ↗
           </a>
         </div>
       `;
 
-      document.getElementById("jump-to-book-btn").addEventListener("click", () => {
-        closeVault();
+      document.getElementById("vault-jump-btn").addEventListener("click", () => {
+        closeTerminal();
         window.location.hash = match.id;
-        checkDeepLink();
+        verifyDeepLink();
       });
     } else {
       vaultResult.innerHTML = `
-        <div style="color: var(--hue5-tint); border-left: 3px solid var(--hue5-pure); padding-left: 12px;">
-          <strong>CODE UNRECOGNIZED:</strong> The format must follow <code>CONT.CTRY.REG.LOC.START.END.VOL</code> (e.g. <code>EU.ITA.TOS.FLR.1450.1550.01</code>).
+        <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #e57373;">
+          [INVALID COORDINATE] Required syntax: <code>00.000.00.0000.0000.0000.000</code>
         </div>
       `;
     }
   }
 
   if (vaultSubmit) {
-    vaultSubmit.addEventListener("click", () => {
-      decodeArchivalCode(vaultInput.value);
-    });
+    vaultSubmit.addEventListener("click", () => decodeNumericCode(vaultInput.value));
   }
-
   if (vaultInput) {
     vaultInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") decodeArchivalCode(vaultInput.value);
+      if (e.key === "Enter") decodeNumericCode(vaultInput.value);
     });
   }
 
-  codePills.forEach(pill => {
+  shortcutPills.forEach(pill => {
     pill.addEventListener("click", () => {
-      const c = pill.getAttribute("data-code");
-      vaultInput.value = c;
-      decodeArchivalCode(c);
+      const code = pill.getAttribute("data-code");
+      vaultInput.value = code;
+      decodeNumericCode(code);
     });
   });
 
-  // Modal Preview Handling
-  const modal = document.getElementById("preview-modal");
+  // Modal Sheet Detail
+  const previewModal = document.getElementById("preview-modal");
   const modalBody = document.getElementById("modal-body");
   const modalClose = document.getElementById("modal-close");
   const modalOverlay = document.getElementById("modal-overlay");
 
-  function attachPreviewListeners() {
-    document.querySelectorAll(".btn-preview-interior").forEach(btn => {
+  function bindPreviewEvents() {
+    document.querySelectorAll(".btn-inspect").forEach(btn => {
       btn.addEventListener("click", () => {
-        const bookId = btn.getAttribute("data-id");
-        const book = books.find(b => b.id === bookId);
-        if (book) {
+        const id = btn.getAttribute("data-id");
+        const item = archiveRecords.find(r => r.id === id);
+        if (item) {
           modalBody.innerHTML = `
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--hue3-tint); margin-bottom: 6px;">
-              REF: ${book.archivalCode}
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--glow-emerald); margin-bottom: 8px;">
+              NUMERIC ARCHIVE REF: ${item.numericCode}
             </div>
-            <h2 style="font-family: var(--font-heading); margin-bottom: 8px; color: var(--hue3-tint);">${book.title}</h2>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">${book.series} • ${book.specs}</p>
-            <h4 style="color: var(--text-main); margin-bottom: 12px;">Interior Structure & KDP Specs:</h4>
-            <ul style="padding-left: 20px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.8;">
-              ${book.previewPages.map(p => `<li>${p}</li>`).join("")}
+            <h2 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 500; margin-bottom: 6px; color: var(--tint-050);">
+              ${item.title}
+            </h2>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--tint-300); margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--tone-700);">
+              ${item.specs} • ${item.geoMeta.epoch}
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--tint-100); margin-bottom: 14px;">
+              Manufacturing & Interior Specifications:
+            </h4>
+            <ul style="padding-left: 18px; color: var(--tint-300); font-size: 0.88rem; line-height: 1.8; margin-bottom: 28px; font-weight: 300;">
+              ${item.previewSpecs.map(s => `<li>${s}</li>`).join("")}
             </ul>
-            <a href="${book.amazonUrl}" target="_blank" rel="noopener" class="btn-buy-amazon" style="text-align: center; text-decoration: none;">
-              Order Physical Paperback on Amazon ↗
+            <a href="${item.amazonUrl}" target="_blank" rel="noopener" class="btn-buy-amazon" style="text-decoration: none;">
+              Order Bound Edition on Amazon ↗
             </a>
           `;
-          modal.classList.add("active");
+          previewModal.classList.add("active");
         }
       });
     });
   }
 
-  function closeModal() {
-    modal.classList.remove("active");
+  function closePreview() {
+    previewModal.classList.remove("active");
   }
 
-  if (modalClose) modalClose.addEventListener("click", closeModal);
-  if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
+  if (modalClose) modalClose.addEventListener("click", closePreview);
+  if (modalOverlay) modalOverlay.addEventListener("click", closePreview);
 });
