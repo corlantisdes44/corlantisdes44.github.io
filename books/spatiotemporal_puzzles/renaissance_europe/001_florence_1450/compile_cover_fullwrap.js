@@ -91,12 +91,12 @@ doc.strokeColor('#b89758').lineWidth(0.6)
    .moveTo(bContentX + 30, bFrameY + 120).lineTo(bContentX + bContentW - 30, bFrameY + 120).stroke();
 
 // Engaging Puzzle Pitch
-const backPitch = `Step back in time to Florence between 1450 and 1550 AD—the golden century of Brunelleschi, Leonardo da Vinci, Botticelli, Michelangelo, and the Medici dynasty.
+const backPitch = `Step back in time to Florence between 1450 and 1550 AD - the golden century of Brunelleschi, Leonardo da Vinci, Botticelli, Michelangelo, and the Medici dynasty.
 
 This masterfully curated puzzle collection brings the High Renaissance to life through 100 large-print word search puzzles and 1,800 authentic historical terms. Discover the bottegas, monuments, merchant guilds, and banking dynasties that shaped Western civilization.`;
 
-doc.fillColor('#f0e6d6').font('Times-Roman').fontSize(10.2)
-   .text(backPitch, bContentX, bFrameY + 135, { width: bContentW, align: 'justify', lineGap: 4.5 });
+doc.fillColor('#f0e6d6').font('Times-Roman').fontSize(10.5)
+   .text(backPitch, bContentX, bFrameY + 135, { width: bContentW, align: 'left', lineGap: 5 });
 
 // 4 Commercial Puzzle Highlights with clean vector bullets
 const puzzleFeatures = [
