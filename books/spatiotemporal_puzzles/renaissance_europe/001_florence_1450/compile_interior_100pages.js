@@ -65,23 +65,17 @@ function getPageBounds(pageNumber) {
 }
 
 function drawCleanPageGround(b, showWatermark = true) {
-  // Clean warm natural ivory base
-  doc.rect(0, 0, PAGE_W, PAGE_H).fill('#faf8f5');
+  // Amazon Cream Paper provides the authentic physical cream background.
+  // No full-bleed fill and no perimeter border (guarantees 100% KDP margin compliance).
 
-  // Single clean, refined outer frame (0.75 pt)
-  doc.save();
-  doc.strokeColor('#3a3530').lineWidth(0.75);
-  doc.rect(b.left - 8, 28, b.width + 16, PAGE_H - 56).stroke();
-  doc.restore();
-
-  // Subtle Renaissance canvas oil painting watermark (6% opacity)
+  // Subtle Renaissance canvas oil painting watermark (strictly inside safe margins)
   if (showWatermark && bgImage) {
     doc.save();
     doc.fillOpacity(0.06);
-    doc.image(bgImage, b.left - 4, 60, {
-      width: b.width + 8,
-      height: PAGE_H - 120,
-      fit: [b.width + 8, PAGE_H - 120],
+    doc.image(bgImage, b.left + 20, 70, {
+      width: b.width - 40,
+      height: PAGE_H - 140,
+      fit: [b.width - 40, PAGE_H - 140],
       align: 'center',
       valign: 'center'
     });
@@ -192,7 +186,7 @@ doc.fillColor('#555555').font('Times-Italic').fontSize(8)
 doc.restore();
 
 doc.fillColor('#4a4035').font('Times-Bold').fontSize(8)
-   .text('3', b3.left, PAGE_H - 34, { width: b3.width, align: 'right' });
+   .text('3', b3.left, PAGE_H - 38, { width: b3.width, align: 'right' });
 
 
 // ==========================================
@@ -210,7 +204,7 @@ doc.fillColor('#888888').font('Times-Roman').fontSize(8.5)
    .text('- Florentine Proverb', b4.left, PAGE_H / 2 + 6, { width: b4.width, align: 'center' });
 
 doc.fillColor('#4a4035').font('Times-Bold').fontSize(8)
-   .text('4', b4.left, PAGE_H - 34, { width: b4.width, align: 'left' });
+   .text('4', b4.left, PAGE_H - 38, { width: b4.width, align: 'left' });
 
 
 // ==========================================
@@ -300,16 +294,16 @@ puzzles.forEach((p, idx) => {
     doc.fillColor('#111111').font('Helvetica-Bold').fontSize(8.5).text(w, wx + 10, wy, { characterSpacing: 0.3 });
   });
 
-  // Footer: Page Number & Series Citation
+  // Footer: Page Number & Series Citation (Comfortably inside safe margin)
   doc.strokeColor('#d0cbc4').lineWidth(0.5)
-     .moveTo(b.left, PAGE_H - 42).lineTo(b.right, PAGE_H - 42).stroke();
+     .moveTo(b.left, PAGE_H - 46).lineTo(b.right, PAGE_H - 46).stroke();
 
   const pageAlign = b.isOdd ? 'right' : 'left';
   doc.fillColor('#4a4035').font('Times-Bold').fontSize(8.5)
-     .text(String(pageNum), b.left, PAGE_H - 34, { width: b.width, align: pageAlign });
+     .text(String(pageNum), b.left, PAGE_H - 38, { width: b.width, align: pageAlign });
 
   doc.fillColor('#555555').font('Times-Roman').fontSize(7.5)
-     .text('HISTORICAL WORD SEARCH | FLORENCE (1450-1550 AD)', b.left, PAGE_H - 34, { width: b.width, align: 'center', characterSpacing: 0.8 });
+     .text('HISTORICAL WORD SEARCH | FLORENCE (1450-1550 AD)', b.left, PAGE_H - 38, { width: b.width, align: 'center', characterSpacing: 0.8 });
 });
 
 
@@ -350,7 +344,7 @@ glossaryPart1.forEach(g => {
 });
 
 doc.fillColor('#4a4035').font('Times-Bold').fontSize(8.5)
-   .text('105', b105.left, PAGE_H - 34, { width: b105.width, align: 'right' });
+   .text('105', b105.left, PAGE_H - 38, { width: b105.width, align: 'right' });
 
 
 // ==========================================
@@ -390,7 +384,7 @@ glossaryPart2.forEach(g => {
 });
 
 doc.fillColor('#4a4035').font('Times-Bold').fontSize(8.5)
-   .text('106', b106.left, PAGE_H - 34, { width: b106.width, align: 'left' });
+   .text('106', b106.left, PAGE_H - 38, { width: b106.width, align: 'left' });
 
 
 // ==========================================
@@ -440,7 +434,7 @@ doc.fillColor('#5a4a3a').font('Courier-Bold').fontSize(8.5)
 doc.restore();
 
 doc.fillColor('#4a4035').font('Times-Bold').fontSize(8.5)
-   .text('107', b107.left, PAGE_H - 34, { width: b107.width, align: 'right' });
+   .text('107', b107.left, PAGE_H - 38, { width: b107.width, align: 'right' });
 
 
 // ==========================================
@@ -458,7 +452,7 @@ doc.fillColor('#999999').font('Times-Roman').fontSize(7.5)
    .text('HISTORICAL PUZZLE EDITIONS', b108.left, PAGE_H / 2 + 5, { width: b108.width, align: 'center', characterSpacing: 1 });
 
 doc.fillColor('#4a4035').font('Times-Bold').fontSize(8.5)
-   .text('108', b108.left, PAGE_H - 34, { width: b108.width, align: 'left' });
+   .text('108', b108.left, PAGE_H - 38, { width: b108.width, align: 'left' });
 
 doc.end();
 
