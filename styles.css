@@ -26,11 +26,11 @@
   --text-secondary: #dccfc0;        /* Warm Sand */
   --text-muted:     #8f9f8c;
 
-  /* DYNAMIC COLOR-SHIFTING MATURATION BORDERS (Zero Text Labels) */
+  /* DYNAMIC COLOR-SHIFTING MATURATION PALETTES */
   --color-sprout:   #a1bc98;        /* Fresh 0-7 Days (Celadon Green) */
   --color-flower:   #dccfc0;        /* In Bloom 8-30 Days (Warm Sand) */
   --color-ripe:     #9d6638;        /* Ripe Harvest 31-90 Days (Terracotta Leather) */
-  --color-ancient:  #778873;        /* Heritage 90+ Days (Dark Sage & Espresso) */
+  --color-ancient:  #778873;        /* Heritage 90+ Days (Dark Sage) */
 
   /* 2-SECOND DEEP LINK GLOW */
   --glow-color:     #a1bc98;
@@ -162,7 +162,7 @@ a {
 }
 
 /* =========================================================
-   INTRO BAR (Subtle, Non-Intrusive)
+   INTRO BAR
    ========================================================= */
 .intro-bar {
   padding: 32px 24px 20px;
@@ -193,7 +193,7 @@ a {
 }
 
 /* =========================================================
-   COMPACT BOOK GRID & MINIMALIST TILES
+   COMPACT BOOK GRID & FULL-TILE COLOR SHIFTING
    ========================================================= */
 .catalog-section {
   padding: 20px 24px 80px;
@@ -207,40 +207,95 @@ a {
   gap: 24px;
 }
 
-/* COMPACT TILE */
+/* COMPACT TILE BASE */
 .book-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-card);
   border-radius: var(--radius-sm);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
   position: relative;
 }
 
 .book-card:hover {
-  transform: translateY(-3px);
-  background: var(--bg-card-hover);
+  transform: translateY(-4px);
 }
 
-/* DYNAMIC COLOR-SHIFTING EDGES (Based on Maturation Age) */
+/* =========================================================
+   🌿 FULL-TILE COLOR SHIFTING (The whole card wears the color)
+   ========================================================= */
+
+/* 1. FRESH SPROUT (Celadon Green Tone #a1bc98) */
 .book-card.bloom-sprout {
-  border-bottom: 3px solid var(--color-sprout);
+  background: linear-gradient(180deg, #25332a 0%, #1e2822 100%);
+  border: 1.5px solid var(--color-sprout);
+  box-shadow: 0 4px 18px rgba(161, 188, 152, 0.12);
 }
+.book-card.bloom-sprout .card-photo-box {
+  background: radial-gradient(circle at 50% 30%, rgba(161, 188, 152, 0.18) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border-bottom: 1px solid rgba(161, 188, 152, 0.25);
+}
+.book-card.bloom-sprout .card-bottom-row {
+  background: #1e2822;
+}
+.book-card.bloom-sprout .cover-mockup {
+  border-left: 5px solid var(--color-sprout);
+}
+
+/* 2. IN BLOOM (Warm Sand Linen Tone #dccfc0) */
 .book-card.bloom-flower {
-  border-bottom: 3px solid var(--color-flower);
+  background: linear-gradient(180deg, #302f2b 0%, #252522 100%);
+  border: 1.5px solid var(--color-flower);
+  box-shadow: 0 4px 18px rgba(220, 207, 192, 0.12);
 }
+.book-card.bloom-flower .card-photo-box {
+  background: radial-gradient(circle at 50% 30%, rgba(220, 207, 192, 0.16) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border-bottom: 1px solid rgba(220, 207, 192, 0.25);
+}
+.book-card.bloom-flower .card-bottom-row {
+  background: #252522;
+}
+.book-card.bloom-flower .cover-mockup {
+  border-left: 5px solid var(--color-flower);
+}
+
+/* 3. RIPENED HARVEST (Terracotta Leather Tone #9d6638) */
 .book-card.bloom-ripe {
-  border-bottom: 3px solid var(--color-ripe);
+  background: linear-gradient(180deg, #332720 0%, #271e18 100%);
+  border: 1.5px solid var(--color-ripe);
+  box-shadow: 0 4px 18px rgba(157, 102, 56, 0.16);
 }
+.book-card.bloom-ripe .card-photo-box {
+  background: radial-gradient(circle at 50% 30%, rgba(157, 102, 56, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border-bottom: 1px solid rgba(157, 102, 56, 0.3);
+}
+.book-card.bloom-ripe .card-bottom-row {
+  background: #271e18;
+}
+.book-card.bloom-ripe .cover-mockup {
+  border-left: 5px solid var(--color-ripe);
+}
+
+/* 4. HERITAGE ARCHIVE (Dark Sage Tone #778873) */
 .book-card.bloom-ancient {
-  border-bottom: 3px solid var(--color-ancient);
+  background: linear-gradient(180deg, #2b332c 0%, #202621 100%);
+  border: 1.5px solid var(--color-ancient);
+  box-shadow: 0 4px 18px rgba(119, 136, 115, 0.12);
+}
+.book-card.bloom-ancient .card-photo-box {
+  background: radial-gradient(circle at 50% 30%, rgba(119, 136, 115, 0.18) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border-bottom: 1px solid rgba(119, 136, 115, 0.25);
+}
+.book-card.bloom-ancient .card-bottom-row {
+  background: #202621;
+}
+.book-card.bloom-ancient .cover-mockup {
+  border-left: 5px solid var(--color-ancient);
 }
 
 /* ⚡ 2-SECOND ACTIVE GLOW (Deep Link Target) */
 .book-card.highlight-glow {
-  animation: compactAuraPulse 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation: compactAuraPulse 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards !important;
 }
 
 @keyframes compactAuraPulse {
@@ -248,13 +303,11 @@ a {
     box-shadow: 0 0 0 0 rgba(161, 188, 152, 0);
   }
   20% {
-    box-shadow: 0 0 28px 5px var(--glow-aura), inset 0 0 12px rgba(161, 188, 152, 0.2);
-    border-color: var(--c-celadon);
-    transform: scale(1.02);
+    box-shadow: 0 0 32px 8px var(--glow-aura), inset 0 0 16px rgba(161, 188, 152, 0.25);
+    transform: scale(1.025);
   }
   60% {
-    box-shadow: 0 0 16px 2px var(--glow-aura);
-    border-color: var(--c-celadon);
+    box-shadow: 0 0 18px 4px var(--glow-aura);
     transform: scale(1.01);
   }
   100% {
@@ -265,21 +318,18 @@ a {
 
 /* PHOTO / COVER CONTAINER */
 .card-photo-box {
-  padding: 30px 16px 24px;
-  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.3) 100%);
+  padding: 32px 16px 26px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid var(--border-card);
 }
 
 .cover-mockup {
   width: 140px;
   height: 195px;
-  background: #19201a;
+  background: #141a15;
   border-radius: 2px 7px 7px 2px;
-  border-left: 5px solid var(--c-terracotta);
-  box-shadow: -6px 8px 20px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: -6px 8px 22px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -323,7 +373,6 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  background: var(--bg-card);
 }
 
 .short-title {
