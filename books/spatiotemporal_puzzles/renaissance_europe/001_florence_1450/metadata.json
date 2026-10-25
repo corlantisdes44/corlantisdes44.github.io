@@ -1,0 +1,44 @@
+{
+  "bookId": "001_florence_1450",
+  "archivalNumericCode": "02.380.09.0501.1450.1550.001",
+  "spatiotemporalMeta": {
+    "continent": "02 (Europe)",
+    "country": "380 (Italy)",
+    "region": "09 (Tuscany)",
+    "location": "0501 (Florence / Firenze)",
+    "epochStart": 1450,
+    "epochEnd": 1550,
+    "epochName": "The High Renaissance",
+    "volumeNumber": "001"
+  },
+  "kdpListing": {
+    "title": "Florence: The High Renaissance (1450–1550 AD)",
+    "subtitle": "Large-Print Historical Word Search & Micro-History Chronicles",
+    "seriesName": "Spatiotemporal Historical Puzzles",
+    "seriesVolume": 1,
+    "author": "TheBookGuy Archive",
+    "trimSize": "8.5 x 11 inches",
+    "pageCount": 100,
+    "interiorType": "Black & White on Cream Paper",
+    "spineWidthInches": 0.225,
+    "coverFinish": "Matte",
+    "listPriceUsd": 8.99,
+    "estimatedPrintCostUsd": 2.40,
+    "estimatedRoyaltyPerSaleUsd": 2.99,
+    "targetAudience": ["Adults", "Seniors", "History Enthusiasts", "Art History Students"],
+    "categories": [
+      "GAMES & ACTIVITIES / Logic & Brain Teasers",
+      "HISTORY / Europe / Renaissance"
+    ],
+    "keywords": [
+      "florence renaissance history puzzle book",
+      "large print word search for seniors history",
+      "italian renaissance art history word search",
+      "lost civilizations word search for adults",
+      "brunelleschi dome medici history trivia",
+      "screen free gifts for history buffs",
+      "brain games relaxing historical word search"
+    ],
+    "descriptionHtml": "<p><b>Step into the bottegas, guild halls, and marble quarries of 15th-century Florence.</b></p><p><i>Florence: The High Renaissance (1450–1550 AD)</i> is Volume 001 of the Spatiotemporal Archive—a systematic series capturing human history at the intersection of exact geographic place and historical time.</p><p><b>Inside this physical volume:</b></p><ul><li><b>80 Curated Themed Word Searches:</b> From Brunelleschi’s vaulting techniques to Leonardo’s mechanical notebooks, Botticelli’s pigment recipes, and the wool guild ledgers of the Arte della Lana.</li><li><b>Historical Context on Every Page:</b> Every puzzle is paired with a micro-history chronicle setting the scene in 15th-century Tuscany.</li><li><b>Engineered 18pt Large-Print:</b> High-contrast, easy-to-read typography designed for relaxed, screen-free focus with zero eye strain.</li><li><b>Complete Solution Keys:</b> Full answer grids included at the back of the book (Pages 81–100).</li><li><b>Archival Registry Stamp:</b> Classified under international cartographic coordinate <code>02.380.09.0501.1450.1550.001</code>.</li></ul><p>Standardized 8.5\" × 11\" format printed on rich cream paper. An ideal gift for history lovers, travelers, and curious minds.</p>"
+  }
+}

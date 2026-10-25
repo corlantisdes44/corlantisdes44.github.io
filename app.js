@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "florence",
       shortTitle: "Florence (1450)",
       coverName: "FLORENCE // RENAISSANCE",
+      coverImage: "assets/covers/florence_1450.png",
       vol: "VOL. 001",
       uploadDate: "2026-10-25", // 0 days -> Sprout (Celadon Green shift)
       numericCode: "02.380.09.0501.1450.1550.001",
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "giza",
       shortTitle: "Giza (2550 BCE)",
       coverName: "GIZA // DYNASTY IV",
+      coverImage: null,
       vol: "VOL. 002",
       uploadDate: "2026-10-10", // 15 days -> In Bloom (Warm Sand shift)
       numericCode: "01.818.04.0042.2550.2490.001",
@@ -23,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "edo",
       shortTitle: "Edo (1603)",
       coverName: "EDO // SHOGUNATE",
+      coverImage: null,
       vol: "VOL. 003",
       uploadDate: "2026-08-15", // 71 days -> Ripened (Terracotta Leather shift)
       numericCode: "03.392.13.0108.1603.1867.001",
@@ -59,9 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
       card.className = `book-card ${maturationClass}`;
       card.id = b.id;
 
+      const imageStyle = b.coverImage ? `style="background-image: url('${b.coverImage}');"` : "";
+      const hasImageClass = b.coverImage ? "has-image" : "";
+
       card.innerHTML = `
         <div class="card-photo-box">
-          <div class="cover-mockup">
+          <div class="cover-mockup ${hasImageClass}" ${imageStyle}>
             <span class="mockup-vol">${b.vol}</span>
             <div class="mockup-name">${b.coverName}</div>
             <span class="mockup-mark">THEBOOKGUY</span>

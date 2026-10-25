@@ -1,0 +1,23 @@
+{
+  "name": "money",
+  "version": "1.0.0",
+  "description": "A structured, systematic workspace for researching, building, and publishing high-leverage passive and active income assets (Amazon KDP, Digital Printables, ComfyUI visual storytelling, and audience traffic engines).",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-thebookguy:corlantisdes44/corlantisdes44.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pdfkit": "^0.20.2"
+  }
+}

@@ -338,6 +338,25 @@ a {
   transition: var(--transition);
 }
 
+.cover-mockup.has-image {
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.cover-mockup.has-image::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, rgba(18, 13, 9, 0.6) 0%, rgba(18, 13, 9, 0.15) 45%, rgba(18, 13, 9, 0.75) 100%);
+  pointer-events: none;
+}
+
+.cover-mockup.has-image > * {
+  position: relative;
+  z-index: 1;
+}
+
 .book-card:hover .cover-mockup {
   transform: scale(1.03);
 }

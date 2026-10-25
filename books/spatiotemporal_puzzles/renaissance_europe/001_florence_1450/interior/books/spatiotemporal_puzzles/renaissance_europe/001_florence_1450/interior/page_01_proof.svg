@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="612pt" height="792pt" viewBox="0 0 612 792">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&amp;family=Cormorant+Garamond:wght@600;700&amp;family=Inter:wght@600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+      
+      .bg-parchment { fill: #f7f2e7; }
+      .outer-frame { fill: none; stroke: #8a6847; stroke-width: 1.2; }
+      .inner-frame { fill: none; stroke: #bfa787; stroke-width: 0.6; }
+      
+      .header-code { font-family: 'JetBrains Mono', monospace; font-size: 7.5pt; fill: #7c6248; letter-spacing: 0.12em; font-weight: 700; }
+      .header-vol { font-family: 'Cinzel', serif; font-size: 8pt; fill: #5c4228; letter-spacing: 0.14em; font-weight: 700; text-anchor: end; }
+      
+      .era-badge { font-family: 'JetBrains Mono', monospace; font-size: 8pt; font-weight: 700; fill: #8a5a36; letter-spacing: 0.12em; }
+      .puzzle-title { font-family: 'Cinzel', serif; font-size: 20pt; font-weight: 700; fill: #241b12; letter-spacing: 0.05em; }
+      
+      .grid-box { fill: rgba(253, 250, 244, 0.94); stroke: #5a4430; stroke-width: 1.8; }
+      .grid-cell { stroke: #dcd3c1; stroke-width: 0.55; }
+      .grid-letter { font-family: 'Inter', sans-serif; font-size: 11.5pt; font-weight: 700; fill: #1a140d; text-anchor: middle; dominant-baseline: central; }
+      
+      .bank-title { font-family: 'Cinzel', serif; font-size: 8.5pt; font-weight: 700; fill: #543c26; letter-spacing: 0.16em; }
+      .bank-item { font-family: 'Inter', sans-serif; font-size: 8.8pt; font-weight: 600; fill: #261c13; letter-spacing: 0.03em; }
+      .fleuron { fill: #8a5a36; font-size: 8pt; }
+      
+      .footer-txt { font-family: 'Cinzel', serif; font-size: 8pt; fill: #7c6248; letter-spacing: 0.1em; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Antique Vellum Background Ground -->
+  <rect width="612" height="792" class="bg-parchment" />
+
+  <!-- Intaglio Plate-Mark Margin Frames -->
+  <rect x="42" y="30" width="544" height="732" class="outer-frame" />
+  <rect x="46" y="34" width="536" height="724" class="inner-frame" />
+  
+  <circle cx="44" cy="32" r="3" fill="#8a6847" />
+  <circle cx="584" cy="32" r="3" fill="#8a6847" />
+  <circle cx="44" cy="760" r="3" fill="#8a6847" />
+  <circle cx="584" cy="760" r="3" fill="#8a6847" />
+
+  
+
+  <!-- Running Header -->
+  <text x="54" y="52" class="header-code">ARCHIVE REGISTRY // 02.380.09.0501.1450.1550.001</text>
+  <text x="574" y="52" class="header-vol">VOLUME I • FLORENCE</text>
+  <line x1="54" y1="58" x2="574" y2="58" stroke="#8a6847" stroke-width="1.2" />
+  <line x1="54" y1="61" x2="574" y2="61" stroke="#d4c3ad" stroke-width="0.5" />
+
+  <!-- Clean Title & Era (No Paragraph!) -->
+  <text x="54" y="86" class="era-badge">✦ FLORENCE, TUSCANY • 1450 AD</text>
+  <text x="54" y="112" class="puzzle-title">01. BRUNELLESCHI'S DOME</text>
+  <line x1="54" y1="122" x2="574" y2="122" stroke="#c8b59e" stroke-width="0.8" />
+
+  <!-- 16x16 Puzzle Grid Container -->
+  <rect x="126" y="135" width="376" height="376" class="grid-box" />
+  <rect x="126" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="146.75" class="grid-letter">B</text>
+  <rect x="149.5" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="146.75" class="grid-letter">R</text>
+  <rect x="173" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="146.75" class="grid-letter">U</text>
+  <rect x="196.5" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="146.75" class="grid-letter">N</text>
+  <rect x="220" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="146.75" class="grid-letter">E</text>
+  <rect x="243.5" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="146.75" class="grid-letter">L</text>
+  <rect x="267" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="146.75" class="grid-letter">L</text>
+  <rect x="290.5" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="146.75" class="grid-letter">E</text>
+  <rect x="314" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="146.75" class="grid-letter">S</text>
+  <rect x="337.5" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="146.75" class="grid-letter">C</text>
+  <rect x="361" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="146.75" class="grid-letter">H</text>
+  <rect x="384.5" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="146.75" class="grid-letter">I</text>
+  <rect x="408" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="146.75" class="grid-letter">F</text>
+  <rect x="431.5" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="146.75" class="grid-letter">T</text>
+  <rect x="455" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="146.75" class="grid-letter">P</text>
+  <rect x="478.5" y="135" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="146.75" class="grid-letter">Q</text>
+  <rect x="126" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="170.25" class="grid-letter">H</text>
+  <rect x="149.5" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="170.25" class="grid-letter">E</text>
+  <rect x="173" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="170.25" class="grid-letter">R</text>
+  <rect x="196.5" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="170.25" class="grid-letter">R</text>
+  <rect x="220" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="170.25" class="grid-letter">I</text>
+  <rect x="243.5" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="170.25" class="grid-letter">N</text>
+  <rect x="267" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="170.25" class="grid-letter">G</text>
+  <rect x="290.5" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="170.25" class="grid-letter">B</text>
+  <rect x="314" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="170.25" class="grid-letter">O</text>
+  <rect x="337.5" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="170.25" class="grid-letter">N</text>
+  <rect x="361" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="170.25" class="grid-letter">E</text>
+  <rect x="384.5" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="170.25" class="grid-letter">X</text>
+  <rect x="408" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="170.25" class="grid-letter">D</text>
+  <rect x="431.5" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="170.25" class="grid-letter">U</text>
+  <rect x="455" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="170.25" class="grid-letter">O</text>
+  <rect x="478.5" y="158.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="170.25" class="grid-letter">M</text>
+  <rect x="126" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="193.75" class="grid-letter">A</text>
+  <rect x="149.5" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="193.75" class="grid-letter">R</text>
+  <rect x="173" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="193.75" class="grid-letter">N</text>
+  <rect x="196.5" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="193.75" class="grid-letter">O</text>
+  <rect x="220" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="193.75" class="grid-letter">R</text>
+  <rect x="243.5" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="193.75" class="grid-letter">I</text>
+  <rect x="267" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="193.75" class="grid-letter">V</text>
+  <rect x="290.5" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="193.75" class="grid-letter">E</text>
+  <rect x="314" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="193.75" class="grid-letter">R</text>
+  <rect x="337.5" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="193.75" class="grid-letter">Z</text>
+  <rect x="361" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="193.75" class="grid-letter">C</text>
+  <rect x="384.5" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="193.75" class="grid-letter">A</text>
+  <rect x="408" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="193.75" class="grid-letter">L</text>
+  <rect x="431.5" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="193.75" class="grid-letter">C</text>
+  <rect x="455" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="193.75" class="grid-letter">I</text>
+  <rect x="478.5" y="182" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="193.75" class="grid-letter">N</text>
+  <rect x="126" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="217.25" class="grid-letter">V</text>
+  <rect x="149.5" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="217.25" class="grid-letter">A</text>
+  <rect x="173" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="217.25" class="grid-letter">U</text>
+  <rect x="196.5" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="217.25" class="grid-letter">L</text>
+  <rect x="220" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="217.25" class="grid-letter">T</text>
+  <rect x="243.5" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="217.25" class="grid-letter">I</text>
+  <rect x="267" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="217.25" class="grid-letter">N</text>
+  <rect x="290.5" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="217.25" class="grid-letter">G</text>
+  <rect x="314" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="217.25" class="grid-letter">Y</text>
+  <rect x="337.5" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="217.25" class="grid-letter">M</text>
+  <rect x="361" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="217.25" class="grid-letter">A</text>
+  <rect x="384.5" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="217.25" class="grid-letter">S</text>
+  <rect x="408" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="217.25" class="grid-letter">O</text>
+  <rect x="431.5" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="217.25" class="grid-letter">N</text>
+  <rect x="455" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="217.25" class="grid-letter">R</text>
+  <rect x="478.5" y="205.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="217.25" class="grid-letter">Y</text>
+  <rect x="126" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="240.75" class="grid-letter">S</text>
+  <rect x="149.5" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="240.75" class="grid-letter">C</text>
+  <rect x="173" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="240.75" class="grid-letter">A</text>
+  <rect x="196.5" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="240.75" class="grid-letter">F</text>
+  <rect x="220" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="240.75" class="grid-letter">F</text>
+  <rect x="243.5" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="240.75" class="grid-letter">O</text>
+  <rect x="267" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="240.75" class="grid-letter">L</text>
+  <rect x="290.5" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="240.75" class="grid-letter">D</text>
+  <rect x="314" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="240.75" class="grid-letter">I</text>
+  <rect x="337.5" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="240.75" class="grid-letter">N</text>
+  <rect x="361" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="240.75" class="grid-letter">G</text>
+  <rect x="384.5" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="240.75" class="grid-letter">W</text>
+  <rect x="408" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="240.75" class="grid-letter">J</text>
+  <rect x="431.5" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="240.75" class="grid-letter">K</text>
+  <rect x="455" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="240.75" class="grid-letter">L</text>
+  <rect x="478.5" y="229" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="240.75" class="grid-letter">M</text>
+  <rect x="126" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="264.25" class="grid-letter">D</text>
+  <rect x="149.5" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="264.25" class="grid-letter">O</text>
+  <rect x="173" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="264.25" class="grid-letter">U</text>
+  <rect x="196.5" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="264.25" class="grid-letter">B</text>
+  <rect x="220" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="264.25" class="grid-letter">L</text>
+  <rect x="243.5" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="264.25" class="grid-letter">E</text>
+  <rect x="267" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="264.25" class="grid-letter">S</text>
+  <rect x="290.5" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="264.25" class="grid-letter">H</text>
+  <rect x="314" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="264.25" class="grid-letter">E</text>
+  <rect x="337.5" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="264.25" class="grid-letter">L</text>
+  <rect x="361" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="264.25" class="grid-letter">L</text>
+  <rect x="384.5" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="264.25" class="grid-letter">P</text>
+  <rect x="408" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="264.25" class="grid-letter">B</text>
+  <rect x="431.5" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="264.25" class="grid-letter">O</text>
+  <rect x="455" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="264.25" class="grid-letter">T</text>
+  <rect x="478.5" y="252.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="264.25" class="grid-letter">T</text>
+  <rect x="126" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="287.75" class="grid-letter">B</text>
+  <rect x="149.5" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="287.75" class="grid-letter">O</text>
+  <rect x="173" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="287.75" class="grid-letter">T</text>
+  <rect x="196.5" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="287.75" class="grid-letter">T</text>
+  <rect x="220" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="287.75" class="grid-letter">E</text>
+  <rect x="243.5" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="287.75" class="grid-letter">G</text>
+  <rect x="267" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="287.75" class="grid-letter">A</text>
+  <rect x="290.5" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="287.75" class="grid-letter">Q</text>
+  <rect x="314" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="287.75" class="grid-letter">R</text>
+  <rect x="337.5" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="287.75" class="grid-letter">U</text>
+  <rect x="361" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="287.75" class="grid-letter">S</text>
+  <rect x="384.5" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="287.75" class="grid-letter">O</text>
+  <rect x="408" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="287.75" class="grid-letter">A</text>
+  <rect x="431.5" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="287.75" class="grid-letter">N</text>
+  <rect x="455" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="287.75" class="grid-letter">T</text>
+  <rect x="478.5" y="276" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="287.75" class="grid-letter">A</text>
+  <rect x="126" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="311.25" class="grid-letter">H</text>
+  <rect x="149.5" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="311.25" class="grid-letter">O</text>
+  <rect x="173" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="311.25" class="grid-letter">I</text>
+  <rect x="196.5" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="311.25" class="grid-letter">S</text>
+  <rect x="220" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="311.25" class="grid-letter">T</text>
+  <rect x="243.5" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="311.25" class="grid-letter">C</text>
+  <rect x="267" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="311.25" class="grid-letter">R</text>
+  <rect x="290.5" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="311.25" class="grid-letter">A</text>
+  <rect x="314" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="311.25" class="grid-letter">N</text>
+  <rect x="337.5" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="311.25" class="grid-letter">E</text>
+  <rect x="361" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="311.25" class="grid-letter">V</text>
+  <rect x="384.5" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="311.25" class="grid-letter">X</text>
+  <rect x="408" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="311.25" class="grid-letter">N</text>
+  <rect x="431.5" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="311.25" class="grid-letter">Z</text>
+  <rect x="455" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="311.25" class="grid-letter">Y</text>
+  <rect x="478.5" y="299.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="311.25" class="grid-letter">W</text>
+  <rect x="126" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="334.75" class="grid-letter">L</text>
+  <rect x="149.5" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="334.75" class="grid-letter">A</text>
+  <rect x="173" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="334.75" class="grid-letter">N</text>
+  <rect x="196.5" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="334.75" class="grid-letter">T</text>
+  <rect x="220" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="334.75" class="grid-letter">E</text>
+  <rect x="243.5" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="334.75" class="grid-letter">R</text>
+  <rect x="267" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="334.75" class="grid-letter">N</text>
+  <rect x="290.5" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="334.75" class="grid-letter">M</text>
+  <rect x="314" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="334.75" class="grid-letter">E</text>
+  <rect x="337.5" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="334.75" class="grid-letter">D</text>
+  <rect x="361" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="334.75" class="grid-letter">I</text>
+  <rect x="384.5" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="334.75" class="grid-letter">C</text>
+  <rect x="408" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="334.75" class="grid-letter">I</text>
+  <rect x="431.5" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="334.75" class="grid-letter">B</text>
+  <rect x="455" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="334.75" class="grid-letter">A</text>
+  <rect x="478.5" y="323" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="334.75" class="grid-letter">N</text>
+  <rect x="126" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="358.25" class="grid-letter">M</text>
+  <rect x="149.5" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="358.25" class="grid-letter">E</text>
+  <rect x="173" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="358.25" class="grid-letter">D</text>
+  <rect x="196.5" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="358.25" class="grid-letter">I</text>
+  <rect x="220" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="358.25" class="grid-letter">C</text>
+  <rect x="243.5" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="358.25" class="grid-letter">I</text>
+  <rect x="267" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="358.25" class="grid-letter">B</text>
+  <rect x="290.5" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="358.25" class="grid-letter">A</text>
+  <rect x="314" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="358.25" class="grid-letter">N</text>
+  <rect x="337.5" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="358.25" class="grid-letter">K</text>
+  <rect x="361" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="358.25" class="grid-letter">P</text>
+  <rect x="384.5" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="358.25" class="grid-letter">Q</text>
+  <rect x="408" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="358.25" class="grid-letter">K</text>
+  <rect x="431.5" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="358.25" class="grid-letter">R</text>
+  <rect x="455" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="358.25" class="grid-letter">S</text>
+  <rect x="478.5" y="346.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="358.25" class="grid-letter">T</text>
+  <rect x="126" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="381.75" class="grid-letter">O</text>
+  <rect x="149.5" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="381.75" class="grid-letter">C</text>
+  <rect x="173" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="381.75" class="grid-letter">T</text>
+  <rect x="196.5" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="381.75" class="grid-letter">A</text>
+  <rect x="220" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="381.75" class="grid-letter">G</text>
+  <rect x="243.5" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="381.75" class="grid-letter">O</text>
+  <rect x="267" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="381.75" class="grid-letter">N</text>
+  <rect x="290.5" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="381.75" class="grid-letter">A</text>
+  <rect x="314" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="381.75" class="grid-letter">L</text>
+  <rect x="337.5" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="381.75" class="grid-letter">L</text>
+  <rect x="361" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="381.75" class="grid-letter">E</text>
+  <rect x="384.5" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="381.75" class="grid-letter">D</text>
+  <rect x="408" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="381.75" class="grid-letter">G</text>
+  <rect x="431.5" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="381.75" class="grid-letter">E</text>
+  <rect x="455" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="381.75" class="grid-letter">R</text>
+  <rect x="478.5" y="370" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="381.75" class="grid-letter">U</text>
+  <rect x="126" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="405.25" class="grid-letter">B</text>
+  <rect x="149.5" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="405.25" class="grid-letter">R</text>
+  <rect x="173" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="405.25" class="grid-letter">I</text>
+  <rect x="196.5" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="405.25" class="grid-letter">C</text>
+  <rect x="220" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="405.25" class="grid-letter">K</text>
+  <rect x="243.5" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="405.25" class="grid-letter">W</text>
+  <rect x="267" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="405.25" class="grid-letter">O</text>
+  <rect x="290.5" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="405.25" class="grid-letter">R</text>
+  <rect x="314" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="405.25" class="grid-letter">K</text>
+  <rect x="337.5" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="405.25" class="grid-letter">S</text>
+  <rect x="361" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="405.25" class="grid-letter">F</text>
+  <rect x="384.5" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="405.25" class="grid-letter">L</text>
+  <rect x="408" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="405.25" class="grid-letter">O</text>
+  <rect x="431.5" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="405.25" class="grid-letter">R</text>
+  <rect x="455" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="405.25" class="grid-letter">I</text>
+  <rect x="478.5" y="393.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="405.25" class="grid-letter">N</text>
+  <rect x="126" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="428.75" class="grid-letter">T</text>
+  <rect x="149.5" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="428.75" class="grid-letter">U</text>
+  <rect x="173" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="428.75" class="grid-letter">S</text>
+  <rect x="196.5" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="428.75" class="grid-letter">C</text>
+  <rect x="220" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="428.75" class="grid-letter">A</text>
+  <rect x="243.5" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="428.75" class="grid-letter">N</text>
+  <rect x="267" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="428.75" class="grid-letter">Y</text>
+  <rect x="290.5" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="428.75" class="grid-letter">F</text>
+  <rect x="314" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="428.75" class="grid-letter">I</text>
+  <rect x="337.5" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="428.75" class="grid-letter">R</text>
+  <rect x="361" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="428.75" class="grid-letter">E</text>
+  <rect x="384.5" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="428.75" class="grid-letter">N</text>
+  <rect x="408" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="428.75" class="grid-letter">Z</text>
+  <rect x="431.5" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="428.75" class="grid-letter">E</text>
+  <rect x="455" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="428.75" class="grid-letter">A</text>
+  <rect x="478.5" y="417" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="428.75" class="grid-letter">R</text>
+  <rect x="126" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="452.25" class="grid-letter">M</text>
+  <rect x="149.5" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="452.25" class="grid-letter">A</text>
+  <rect x="173" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="452.25" class="grid-letter">S</text>
+  <rect x="196.5" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="452.25" class="grid-letter">T</text>
+  <rect x="220" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="452.25" class="grid-letter">E</text>
+  <rect x="243.5" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="452.25" class="grid-letter">R</text>
+  <rect x="267" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="452.25" class="grid-letter">G</text>
+  <rect x="290.5" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="452.25" class="grid-letter">U</text>
+  <rect x="314" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="452.25" class="grid-letter">I</text>
+  <rect x="337.5" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="452.25" class="grid-letter">L</text>
+  <rect x="361" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="452.25" class="grid-letter">D</text>
+  <rect x="384.5" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="452.25" class="grid-letter">P</text>
+  <rect x="408" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="452.25" class="grid-letter">A</text>
+  <rect x="431.5" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="452.25" class="grid-letter">T</text>
+  <rect x="455" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="452.25" class="grid-letter">R</text>
+  <rect x="478.5" y="440.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="452.25" class="grid-letter">O</text>
+  <rect x="126" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="475.75" class="grid-letter">S</text>
+  <rect x="149.5" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="475.75" class="grid-letter">A</text>
+  <rect x="173" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="475.75" class="grid-letter">N</text>
+  <rect x="196.5" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="475.75" class="grid-letter">T</text>
+  <rect x="220" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="475.75" class="grid-letter">A</text>
+  <rect x="243.5" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="475.75" class="grid-letter">M</text>
+  <rect x="267" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="475.75" class="grid-letter">A</text>
+  <rect x="290.5" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="475.75" class="grid-letter">R</text>
+  <rect x="314" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="475.75" class="grid-letter">I</text>
+  <rect x="337.5" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="475.75" class="grid-letter">A</text>
+  <rect x="361" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="475.75" class="grid-letter">C</text>
+  <rect x="384.5" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="475.75" class="grid-letter">A</text>
+  <rect x="408" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="475.75" class="grid-letter">T</text>
+  <rect x="431.5" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="475.75" class="grid-letter">H</text>
+  <rect x="455" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="475.75" class="grid-letter">E</text>
+  <rect x="478.5" y="464" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="475.75" class="grid-letter">D</text>
+  <rect x="126" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="137.75" y="499.25" class="grid-letter">C</text>
+  <rect x="149.5" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="161.25" y="499.25" class="grid-letter">H</text>
+  <rect x="173" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="184.75" y="499.25" class="grid-letter">I</text>
+  <rect x="196.5" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="208.25" y="499.25" class="grid-letter">A</text>
+  <rect x="220" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="231.75" y="499.25" class="grid-letter">R</text>
+  <rect x="243.5" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="255.25" y="499.25" class="grid-letter">O</text>
+  <rect x="267" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="278.75" y="499.25" class="grid-letter">S</text>
+  <rect x="290.5" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="302.25" y="499.25" class="grid-letter">C</text>
+  <rect x="314" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="325.75" y="499.25" class="grid-letter">U</text>
+  <rect x="337.5" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="349.25" y="499.25" class="grid-letter">R</text>
+  <rect x="361" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="372.75" y="499.25" class="grid-letter">O</text>
+  <rect x="384.5" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="396.25" y="499.25" class="grid-letter">V</text>
+  <rect x="408" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="419.75" y="499.25" class="grid-letter">A</text>
+  <rect x="431.5" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="443.25" y="499.25" class="grid-letter">U</text>
+  <rect x="455" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="466.75" y="499.25" class="grid-letter">L</text>
+  <rect x="478.5" y="487.5" width="23.5" height="23.5" class="grid-cell" fill="none" />
+  <text x="490.25" y="499.25" class="grid-letter">T</text>
+
+  <!-- Themed Word Bank -->
+  <text x="54" y="541" class="bank-title">HISTORICAL WORD REGISTRY // 18 TARGET TERMS</text>
+  <line x1="54" y1="547" x2="574" y2="547" stroke="#8a6847" stroke-width="1" />
+  <text x="54" y="567" class="bank-item"><tspan class="fleuron">◆</tspan> BRUNELLESCHI</text>
+  <text x="227.33333333333334" y="567" class="bank-item"><tspan class="fleuron">◆</tspan> SANTA MARIA</text>
+  <text x="400.6666666666667" y="567" class="bank-item"><tspan class="fleuron">◆</tspan> HERRINGBONE</text>
+  <text x="54" y="585" class="bank-item"><tspan class="fleuron">◆</tspan> DOUBLE SHELL</text>
+  <text x="227.33333333333334" y="585" class="bank-item"><tspan class="fleuron">◆</tspan> SCAFFOLDING</text>
+  <text x="400.6666666666667" y="585" class="bank-item"><tspan class="fleuron">◆</tspan> LANTERN</text>
+  <text x="54" y="603" class="bank-item"><tspan class="fleuron">◆</tspan> MASONRY</text>
+  <text x="227.33333333333334" y="603" class="bank-item"><tspan class="fleuron">◆</tspan> TUSCANY</text>
+  <text x="400.6666666666667" y="603" class="bank-item"><tspan class="fleuron">◆</tspan> DUOMO</text>
+  <text x="54" y="621" class="bank-item"><tspan class="fleuron">◆</tspan> HOIST CRANE</text>
+  <text x="227.33333333333334" y="621" class="bank-item"><tspan class="fleuron">◆</tspan> ARNO RIVER</text>
+  <text x="400.6666666666667" y="621" class="bank-item"><tspan class="fleuron">◆</tspan> BOTTEGA</text>
+  <text x="54" y="639" class="bank-item"><tspan class="fleuron">◆</tspan> BRICKWORK</text>
+  <text x="227.33333333333334" y="639" class="bank-item"><tspan class="fleuron">◆</tspan> VAULTING</text>
+  <text x="400.6666666666667" y="639" class="bank-item"><tspan class="fleuron">◆</tspan> MEDICI BANK</text>
+  <text x="54" y="657" class="bank-item"><tspan class="fleuron">◆</tspan> OCTAGONAL</text>
+  <text x="227.33333333333334" y="657" class="bank-item"><tspan class="fleuron">◆</tspan> CALCINA</text>
+  <text x="400.6666666666667" y="657" class="bank-item"><tspan class="fleuron">◆</tspan> MASTER GUILD</text>
+
+  <!-- Running Footer -->
+  <line x1="54" y1="734" x2="574" y2="734" stroke="#c8b59e" stroke-width="0.8" />
+  <text x="306" y="750" class="footer-txt">FOLIO IV • TUSCAN CHRONICLES</text>
+</svg>
