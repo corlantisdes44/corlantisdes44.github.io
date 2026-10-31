@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "kyoto",
       shortTitle: "Kyoto (1550)",
       coverName: "KYOTO // SHOGUNATE",
-      coverImage: null,
+      coverImage: "assets/covers/kyoto_1550.jpg",
       vol: "VOL. 003",
-      uploadDate: "2026-08-15",
+      uploadDate: "2026-10-31",
       numericCode: "03.392.13.0108.1550.1650.003",
       amazonUrl: "https://amazon.com"
     }
