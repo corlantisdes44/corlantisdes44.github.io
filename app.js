@@ -7,28 +7,28 @@ document.addEventListener("DOMContentLoaded", () => {
       coverName: "FLORENCE // RENAISSANCE",
       coverImage: "assets/covers/florence_1450.png",
       vol: "VOL. 001",
-      uploadDate: "2026-10-25", // 0 days -> Sprout (Celadon Green shift)
+      uploadDate: "2026-10-25", // Maturation shift
       numericCode: "02.380.09.0501.1450.1550.001",
       amazonUrl: "https://amazon.com"
     },
     {
-      id: "giza",
-      shortTitle: "Giza (2550 BCE)",
-      coverName: "GIZA // DYNASTY IV",
-      coverImage: null,
+      id: "venice",
+      shortTitle: "Venice (1475)",
+      coverName: "VENICE // SERENISSIMA",
+      coverImage: "assets/covers/venice_1475.jpg",
       vol: "VOL. 002",
-      uploadDate: "2026-10-10", // 15 days -> In Bloom (Warm Sand shift)
-      numericCode: "01.818.04.0042.2550.2490.001",
+      uploadDate: "2026-10-31", // 0 days -> Sprout (Celadon Green shift)
+      numericCode: "02.380.05.0502.1475.1575.002",
       amazonUrl: "https://amazon.com"
     },
     {
-      id: "edo",
-      shortTitle: "Edo (1603)",
-      coverName: "EDO // SHOGUNATE",
+      id: "kyoto",
+      shortTitle: "Kyoto (1550)",
+      coverName: "KYOTO // SHOGUNATE",
       coverImage: null,
       vol: "VOL. 003",
-      uploadDate: "2026-08-15", // 71 days -> Ripened (Terracotta Leather shift)
-      numericCode: "03.392.13.0108.1603.1867.001",
+      uploadDate: "2026-08-15",
+      numericCode: "03.392.13.0108.1550.1650.003",
       amazonUrl: "https://amazon.com"
     }
   ];

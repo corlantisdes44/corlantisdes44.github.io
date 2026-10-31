@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Venice (1475-1575 AD) - Bestseller Word Search Full-Wrap Proof</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      background: #0a0806;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif;
+      color: #e5cfa8;
+    }
+    h1 {
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    p {
+      color: #a8947b;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+    .wrap-container {
+      width: 1260px;
+      height: 810px;
+      box-shadow: 0 16px 54px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(212, 175, 55, 0.4);
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      background: #16100b;
+    }
+    .back-cover {
+      width: 621px;
+      height: 810px;
+      background: #16100b;
+      position: relative;
+      box-sizing: border-box;
+      padding: 36px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .back-frame {
+      position: absolute;
+      top: 24px; left: 24px; right: 24px; bottom: 24px;
+      border: 1.2px solid #b89758;
+      pointer-events: none;
+    }
+    .spine {
+      width: 17.5px;
+      height: 810px;
+      background: #100b07;
+      border-left: 1px solid #b89758;
+      border-right: 1px solid #b89758;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .spine-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 7.5px;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+    .front-cover {
+      width: 621px;
+      height: 810px;
+      position: relative;
+      background: url('venice_1475_oil_painting.jpg') center/cover no-repeat;
+      box-sizing: border-box;
+      padding: 28px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .front-vignette-top {
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 320px;
+      background: linear-gradient(to bottom, rgba(12, 8, 5, 0.92) 0%, rgba(12, 8, 5, 0.75) 65%, transparent 100%);
+      pointer-events: none;
+    }
+    .front-vignette-bottom {
+      position: absolute;
+      bottom: 0; left: 0; right: 0; height: 260px;
+      background: linear-gradient(to top, rgba(12, 8, 5, 0.95) 0%, rgba(12, 8, 5, 0.8) 60%, transparent 100%);
+      pointer-events: none;
+    }
+    .front-frame {
+      position: absolute;
+      top: 16px; left: 16px; right: 16px; bottom: 16px;
+      border: 1.2px solid #d4af37;
+      pointer-events: none;
+    }
+    .large-print-ribbon {
+      background: #d4af37;
+      color: #111111;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-align: center;
+      padding: 5px 0;
+      letter-spacing: 2px;
+      border: 1px solid #ffffff;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 2;
+    }
+    .title-display {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .title-small {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: #e5cfa8;
+    }
+    .title-main-top {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #ffffff;
+      margin: 2px 0;
+    }
+    .title-main-huge {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 50px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #f5eedc;
+      margin: 0;
+      line-height: 1;
+    }
+    .title-city {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #d4af37;
+      margin-top: 6px;
+    }
+    .title-sub {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      margin-top: 2px;
+    }
+    .center-showcase {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 14px;
+      position: relative;
+      z-index: 2;
+    }
+    .grid-preview {
+      background: #ffffff;
+      border: 2px solid #3a2e20;
+      padding: 8px;
+      display: grid;
+      grid-template-columns: repeat(8, 20px);
+      grid-template-rows: repeat(8, 20px);
+      gap: 1px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    }
+    .grid-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      color: #111111;
+      position: relative;
+    }
+    .hl-gold { background: rgba(255, 204, 0, 0.45); }
+    .hl-cyan { background: rgba(0, 204, 204, 0.40); }
+    .hl-rose { background: rgba(255, 102, 102, 0.35); }
+    .gold-seal {
+      width: 116px;
+      height: 116px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #e5cfa8 0%, #d4af37 70%, #aa8528 100%);
+      border: 3px solid #ffffff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.7), inset 0 0 0 2px #8a6847;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #111111;
+      text-align: center;
+    }
+    .seal-num {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .seal-word {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-top: 2px;
+    }
+    .seal-count {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 8.5px;
+      color: #333333;
+    }
+    .features-pill {
+      background: rgba(22, 16, 11, 0.92);
+      border: 1.2px solid #d4af37;
+      border-radius: 4px;
+      padding: 7px 12px;
+      text-align: center;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 10.5px;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      margin-top: 14px;
+      position: relative;
+      z-index: 2;
+    }
+    .front-bottom {
+      background: rgba(22, 16, 11, 0.90);
+      border: 1px solid #d4af37;
+      padding: 8px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .front-bottom-title {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #d4af37;
+    }
+    .front-bottom-code {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1.2px;
+      margin: 3px 0;
+    }
+    .front-bottom-imprint {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 7.5px;
+      color: #d8cebb;
+      letter-spacing: 1px;
+    }
+    .barcode-box {
+      width: 144px;
+      height: 86.4px;
+      background: #ffffff;
+      border: 1px solid #cccccc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-end;
+      color: #777777;
+      font-family: Arial, sans-serif;
+      font-size: 7px;
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HISTORICAL WORD SEARCH: VENICE (1475–1575 AD)</h1>
+  <p>The Spatiotemporal Puzzle Series — Volume 002 (Full-Wrap 17.49" × 11.25" Print Proof)</p>
+
+  <div class="wrap-container">
+    <!-- BACK COVER -->
+    <div class="back-cover">
+      <div class="back-frame"></div>
+      
+      <div>
+        <div style="text-align: center; color: #d4af37; font-family: 'Times New Roman', serif; font-weight: 700; font-size: 9px; letter-spacing: 2px;">
+          THE SPATIOTEMPORAL PUZZLE SERIES
+        </div>
+        <div style="width: 200px; height: 1px; background: #b89758; margin: 8px auto 14px auto;"></div>
+        
+        <div style="text-align: center; color: #ffffff; font-family: 'Times New Roman', serif; font-weight: 700; font-size: 21px; letter-spacing: 1.5px;">
+          VOYAGE ACROSS THE REALM OF
+        </div>
+        <div style="text-align: center; color: #e5cfa8; font-family: 'Times New Roman', serif; font-weight: 700; font-size: 25px; letter-spacing: 2px;">
+          LA SERENISSIMA
+        </div>
+        <div style="width: 280px; height: 1px; background: #b89758; margin: 12px auto 16px auto;"></div>
+
+        <div style="color: #f0e6d6; font-family: 'Times New Roman', serif; font-size: 10.5px; line-height: 1.5; margin-bottom: 20px;">
+          Step back in time to Venice between 1475 and 1575 AD - the golden century of naval supremacy, global spice caravans, secret statecraft, and radiant Renaissance color.<br><br>
+          This masterfully curated puzzle collection brings the Most Serene Republic to life through 100 large-print word search puzzles and 1,800 authentic historical terms. Discover the great galleys of the Arsenal, the masked halls of Palazzo Ducale, the spice markets of Rialto, and the timeless masterworks of Titian, Tintoretto, and Veronese.
+        </div>
+
+        <div style="margin-top: 15px;">
+          <div style="color: #d4af37; font-family: 'Times New Roman', serif; font-weight: 700; font-size: 9.5px; letter-spacing: 0.8px; margin-bottom: 3px;">
+            * 100 THEMATIC PUZZLES
+          </div>
+          <div style="color: #e0d5c3; font-family: 'Times New Roman', serif; font-size: 8.8px; line-height: 1.4; margin-bottom: 12px; margin-left: 10px;">
+            1,800 hand-verified historical terms covering naval warfare, Levant trade, dogal statecraft, and colorito art.
+          </div>
+
+          <div style="color: #d4af37; font-family: 'Times New Roman', serif; font-weight: 700; font-size: 9.5px; letter-spacing: 0.8px; margin-bottom: 3px;">
+            * EASY-ON-THE-EYES LARGE PRINT
+          </div>
+          <div style="color: #e0d5c3; font-family: 'Times New Roman', serif; font-size: 8.8px; line-height: 1.4; margin-bottom: 12px; margin-left: 10px;">
+            Spacious 16x16 letter matrices printed on high-contrast cream paper for effortless, strain-free solving.
+          </div>
+
+          <div style="color: #d4af37; font-family: 'Times New Roman', serif; font-weight: 700; font-size: 9.5px; letter-spacing: 0.8px; margin-bottom: 3px;">
+            * HISTORICAL GLOSSARY INCLUDED
+          </div>
+          <div style="color: #e0d5c3; font-family: 'Times New Roman', serif; font-size: 8.8px; line-height: 1.4; margin-bottom: 12px; margin-left: 10px;">
+            Complete reference lexicon defining key Venetian maritime terminology, state councils, and Lagoon institutions.
+          </div>
+
+          <div style="color: #d4af37; font-family: 'Times New Roman', serif; font-weight: 700; font-size: 9.5px; letter-spacing: 0.8px; margin-bottom: 3px;">
+            * GENUINE CANVAS ARTWORK
+          </div>
+          <div style="color: #e0d5c3; font-family: 'Times New Roman', serif; font-size: 8.8px; line-height: 1.4; margin-left: 10px;">
+            Authentic Renaissance museum oil painting of the Venetian Lagoon embedded delicately into every puzzle folio.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="background: #221a14; border: 1px solid #b89758; padding: 10px; text-align: center; margin-bottom: 15px;">
+          <div style="color: #d4af37; font-family: 'Times New Roman', serif; font-size: 8.5px; font-weight: 700; letter-spacing: 1.2px;">OFFICIAL ARCHIVE CLASSIFICATION</div>
+          <div style="color: #ffffff; font-family: 'Courier New', monospace; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; margin: 4px 0;">02.380.05.0502.1475.1575.002</div>
+          <div style="color: #c5b398; font-family: 'Times New Roman', serif; font-size: 7.5px;">Europe * Italy * Veneto * Venice * 1475-1575 AD * Volume 002</div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+          <div>
+            <div style="color: #d4af37; font-family: 'Times New Roman', serif; font-size: 8.5px; font-weight: 700; letter-spacing: 1.5px;">THEBOOKGUY PRESS</div>
+            <div style="color: #a8947b; font-family: 'Times New Roman', serif; font-size: 7.5px;">Online Storefront: https://corlantisdes44.github.io</div>
+          </div>
+          <div class="barcode-box">
+            <span>BARCODE RESERVATION ZONE</span>
+            <span style="color: #aaaaaa; font-size: 6px; margin-top: 4px;">(Amazon KDP will imprint barcode here)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPINE -->
+    <div class="spine">
+      <div class="spine-text">HISTORICAL WORD SEARCH: VENICE (1475-1575)   *   100 PUZZLES   *   THEBOOKGUY</div>
+    </div>
+
+    <!-- FRONT COVER -->
+    <div class="front-cover">
+      <div class="front-vignette-top"></div>
+      <div class="front-vignette-bottom"></div>
+      <div class="front-frame"></div>
+
+      <div>
+        <div class="large-print-ribbon">* LARGE PRINT EDITION *</div>
+        <div class="title-display">
+          <div class="title-small">THE SPATIOTEMPORAL PUZZLE SERIES</div>
+          <div class="title-main-top">HISTORICAL</div>
+          <div class="title-main-huge">WORD SEARCH</div>
+          <div class="title-city">VENICE</div>
+          <div class="title-sub">THE MARITIME REPUBLIC (1475-1575 AD)</div>
+        </div>
+
+        <div class="center-showcase">
+          <div class="grid-preview">
+            <div class="grid-cell">D</div><div class="grid-cell">O</div><div class="grid-cell">G</div><div class="grid-cell">E</div><div class="grid-cell">S</div><div class="grid-cell">B</div><div class="grid-cell">K</div><div class="grid-cell">V</div>
+            <div class="grid-cell hl-gold">T</div><div class="grid-cell hl-gold">I</div><div class="grid-cell hl-gold">T</div><div class="grid-cell hl-gold">I</div><div class="grid-cell hl-gold">A</div><div class="grid-cell hl-gold">N</div><div class="grid-cell">O</div><div class="grid-cell">L</div>
+            <div class="grid-cell">G</div><div class="grid-cell">A</div><div class="grid-cell">L</div><div class="grid-cell">L</div><div class="grid-cell">E</div><div class="grid-cell">Y</div><div class="grid-cell">T</div><div class="grid-cell">E</div>
+            <div class="grid-cell hl-cyan">R</div><div class="grid-cell hl-cyan">I</div><div class="grid-cell hl-cyan">A</div><div class="grid-cell hl-cyan">L</div><div class="grid-cell hl-cyan">T</div><div class="grid-cell hl-cyan">O</div><div class="grid-cell">R</div><div class="grid-cell">O</div>
+            <div class="grid-cell">A</div><div class="grid-cell">R</div><div class="grid-cell">S</div><div class="grid-cell">E</div><div class="grid-cell">N</div><div class="grid-cell">A</div><div class="grid-cell">L</div><div class="grid-cell">N</div>
+            <div class="grid-cell hl-rose">M</div><div class="grid-cell hl-rose">U</div><div class="grid-cell hl-rose">R</div><div class="grid-cell hl-rose">A</div><div class="grid-cell hl-rose">N</div><div class="grid-cell hl-rose">O</div><div class="grid-cell">Z</div><div class="grid-cell">A</div>
+            <div class="grid-cell">P</div><div class="grid-cell">A</div><div class="grid-cell">T</div><div class="grid-cell">R</div><div class="grid-cell">O</div><div class="grid-cell">N</div><div class="grid-cell">S</div><div class="grid-cell">R</div>
+            <div class="grid-cell">S</div><div class="grid-cell">P</div><div class="grid-cell">I</div><div class="grid-cell">C</div><div class="grid-cell">E</div><div class="grid-cell">S</div><div class="grid-cell">E</div><div class="grid-cell">D</div>
+          </div>
+
+          <div class="gold-seal">
+            <span class="seal-num">100</span>
+            <span class="seal-word">PUZZLES</span>
+            <span class="seal-count">1,800 WORDS</span>
+          </div>
+        </div>
+
+        <div class="features-pill">
+          * 16x16 Matrices &nbsp;&nbsp;&nbsp; * One Puzzle Per Page &nbsp;&nbsp;&nbsp; * Historical Glossary Included
+        </div>
+      </div>
+
+      <div class="front-bottom">
+        <div class="front-bottom-title">ARCHIVAL REGISTRY CODE</div>
+        <div class="front-bottom-code">02.380.05.0502.1475.1575.002</div>
+        <div class="front-bottom-imprint">VOLUME 002 * THEBOOKGUY PRESS</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
