@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       vol: "VOL. 001",
       uploadDate: "2026-10-25", // Maturation shift
       numericCode: "02.380.09.0501.1450.1550.001",
-      amazonUrl: "https://amazon.com"
+      amazonUrl: "https://www.amazon.com/dp/B0HPNCY4L7"
     },
     {
       id: "venice",
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       vol: "VOL. 002",
       uploadDate: "2026-10-31", // 0 days -> Sprout (Celadon Green shift)
       numericCode: "02.380.05.0502.1475.1575.002",
-      amazonUrl: "https://amazon.com"
+      amazonUrl: "https://www.amazon.com/dp/B0HPY1KYYW"
     },
     {
       id: "kyoto",
